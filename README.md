@@ -4,6 +4,19 @@ A personal collection of useful third-party Codex/Claude-style skills installed 
 
 This repository packages skills from third-party or personal-developer sources. Official Anthropic/OpenAI/system skills are intentionally excluded from this collection.
 
+## 中文说明
+
+这是一个个人常用 Skill 集合，整理了我在 2026-05-20 安装的第三方/个人开发者来源的 Codex、Claude 风格 skills。
+
+这个仓库主要用于：
+
+- 备份已经安装过的常用 skills。
+- 快速迁移到新的 Codex 环境。
+- 查看每个 skill 的用途和原始说明。
+- 按来源区分不同作者的工作流集合。
+
+本仓库有意排除了 Anthropic、OpenAI、系统内置等官方 skill，只保留第三方或个人开发者来源的 skill。
+
 ## Sources
 
 - Vercel Labs: `vercel-labs/skills`
@@ -12,6 +25,41 @@ This repository packages skills from third-party or personal-developer sources. 
 - Matt Pocock: `mattpocock/skills`
 - UI/UX Pro Max: `nextlevelbuilder/ui-ux-pro-max-skill`
 - Baoyu Skills: `JimLiu/baoyu-skills`
+
+## 来源说明
+
+- Vercel Labs：用于发现、搜索和安装更多 agent skills。
+- Superpowers：偏严格开发流程，强调先澄清、再计划、再执行、最后验证。
+- Gstack：偏完整工程工作流，覆盖计划、执行、评审、发布、上下文管理等。
+- Matt Pocock：偏工程师日常工作方法，适合 TDD、诊断、PRD/issues 拆解和架构改善。
+- UI/UX Pro Max：偏 UI/UX 设计、视觉风格、设计系统和前端界面优化。
+- Baoyu Skills：偏内容生产、翻译、图片、图文卡片、公众号/社媒发布等工作流。
+
+## 中文分类速览
+
+### Find Skills - Vercel Labs
+
+用于查找是否已有合适 skill，并辅助安装更多 skill。
+
+### Superpowers - obra
+
+适合需要严格流程的开发任务，例如头脑风暴、写计划、执行计划、调试、TDD、代码评审、完成前验证等。
+
+### Gstack - garrytan
+
+适合长期项目或复杂工程流程，包括自动计划、上下文保存/恢复、评审、QA、发布、部署、复盘、浏览器辅助和团队化 agent 工作流。
+
+### Matt Pocock
+
+适合具体工程动作，例如测试驱动开发、问题诊断、把想法转成 PRD 或 issues、架构改善、任务移交、文章编辑和个人生产力流程。
+
+### UI UX Pro Max - nextlevelbuilder
+
+适合网页和移动端 UI/UX 设计，包含风格、配色、字体、组件、布局、设计系统、幻灯片和品牌相关 skill。
+
+### Baoyu Skills - JimLiu
+
+适合内容创作和中文互联网发布场景，包括翻译、Markdown 格式化、图片生成、漫画、图文卡片、信息图、幻灯片、YouTube 字幕、微信/微博/X/小红书发布等。
 
 ## Skill Index
 
@@ -159,3 +207,13 @@ This repository packages skills from third-party or personal-developer sources. 
 ## Install Notes
 
 Copy any desired folder from `skills/` into your Codex skills directory, usually `~/.codex/skills/<skill-name>`, then restart Codex or open a new conversation.
+
+## 安装说明
+
+把 `skills/` 下面需要的任意 skill 文件夹复制到 Codex 的本地 skills 目录即可，通常是：
+
+```text
+~/.codex/skills/<skill-name>
+```
+
+复制完成后，重启 Codex 或新开一个对话，让 Codex 重新加载 skill。
