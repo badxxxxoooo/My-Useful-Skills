@@ -1,0 +1,740 @@
+﻿[
+    {
+        "Group":  "Find Skills - Vercel Labs",
+        "Folder":  "find-skills",
+        "Name":  "find-skills",
+        "Description":  "Helps users discover and install agent skills when they ask questions like \"how do I do X\", \"find a skill for X\", \"is there a skill that can...\", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill."
+    },
+    {
+        "Group":  "Superpowers - obra",
+        "Folder":  "brainstorming",
+        "Name":  "brainstorming",
+        "Description":  "You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation."
+    },
+    {
+        "Group":  "Superpowers - obra",
+        "Folder":  "dispatching-parallel-agents",
+        "Name":  "dispatching-parallel-agents",
+        "Description":  "Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies"
+    },
+    {
+        "Group":  "Superpowers - obra",
+        "Folder":  "executing-plans",
+        "Name":  "executing-plans",
+        "Description":  "Use when you have a written implementation plan to execute in a separate session with review checkpoints"
+    },
+    {
+        "Group":  "Superpowers - obra",
+        "Folder":  "finishing-a-development-branch",
+        "Name":  "finishing-a-development-branch",
+        "Description":  "Use when implementation is complete, all tests pass, and you need to decide how to integrate the work - guides completion of development work by presenting structured options for merge, PR, or cleanup"
+    },
+    {
+        "Group":  "Superpowers - obra",
+        "Folder":  "receiving-code-review",
+        "Name":  "receiving-code-review",
+        "Description":  "Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, not performative agreement or blind implementation"
+    },
+    {
+        "Group":  "Superpowers - obra",
+        "Folder":  "requesting-code-review",
+        "Name":  "requesting-code-review",
+        "Description":  "Use when completing tasks, implementing major features, or before merging to verify work meets requirements"
+    },
+    {
+        "Group":  "Superpowers - obra",
+        "Folder":  "subagent-driven-development",
+        "Name":  "subagent-driven-development",
+        "Description":  "Use when executing implementation plans with independent tasks in the current session"
+    },
+    {
+        "Group":  "Superpowers - obra",
+        "Folder":  "systematic-debugging",
+        "Name":  "systematic-debugging",
+        "Description":  "Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes"
+    },
+    {
+        "Group":  "Superpowers - obra",
+        "Folder":  "test-driven-development",
+        "Name":  "test-driven-development",
+        "Description":  "Use when implementing any feature or bugfix, before writing implementation code"
+    },
+    {
+        "Group":  "Superpowers - obra",
+        "Folder":  "using-git-worktrees",
+        "Name":  "using-git-worktrees",
+        "Description":  "Use when starting feature work that needs isolation from current workspace or before executing implementation plans - ensures an isolated workspace exists via native tools or git worktree fallback"
+    },
+    {
+        "Group":  "Superpowers - obra",
+        "Folder":  "using-superpowers",
+        "Name":  "using-superpowers",
+        "Description":  "Use when starting any conversation - establishes how to find and use skills, requiring Skill tool invocation before ANY response including clarifying questions"
+    },
+    {
+        "Group":  "Superpowers - obra",
+        "Folder":  "verification-before-completion",
+        "Name":  "verification-before-completion",
+        "Description":  "Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always"
+    },
+    {
+        "Group":  "Superpowers - obra",
+        "Folder":  "writing-plans",
+        "Name":  "writing-plans",
+        "Description":  "Use when you have a spec or requirements for a multi-step task, before touching code"
+    },
+    {
+        "Group":  "Superpowers - obra",
+        "Folder":  "writing-skills",
+        "Name":  "writing-skills",
+        "Description":  "Use when creating new skills, editing existing skills, or verifying skills work before deployment"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "gstack",
+        "Name":  "gstack",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "autoplan",
+        "Name":  "autoplan",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "benchmark",
+        "Name":  "benchmark",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "benchmark-models",
+        "Name":  "benchmark-models",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "browse",
+        "Name":  "browse",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "hackernews-frontpage",
+        "Name":  "hackernews-frontpage",
+        "Description":  "Scrape the Hacker News front page (titles, points, comment counts)."
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "canary",
+        "Name":  "canary",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "careful",
+        "Name":  "careful",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "codex",
+        "Name":  "codex",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "context-restore",
+        "Name":  "context-restore",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "context-save",
+        "Name":  "context-save",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "cso",
+        "Name":  "cso",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "design-consultation",
+        "Name":  "design-consultation",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "design-html",
+        "Name":  "design-html",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "design-review",
+        "Name":  "design-review",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "design-shotgun",
+        "Name":  "design-shotgun",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "devex-review",
+        "Name":  "devex-review",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "document-generate",
+        "Name":  "document-generate",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "document-release",
+        "Name":  "document-release",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "freeze",
+        "Name":  "freeze",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "gstack-upgrade",
+        "Name":  "gstack-upgrade",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "guard",
+        "Name":  "guard",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "health",
+        "Name":  "health",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "investigate",
+        "Name":  "investigate",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "land-and-deploy",
+        "Name":  "land-and-deploy",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "landing-report",
+        "Name":  "landing-report",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "learn",
+        "Name":  "learn",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "make-pdf",
+        "Name":  "make-pdf",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "office-hours",
+        "Name":  "office-hours",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "open-gstack-browser",
+        "Name":  "open-gstack-browser",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "gstack-openclaw-ceo-review",
+        "Name":  "gstack-openclaw-ceo-review",
+        "Description":  "Use when asked to review a plan, challenge a proposal, run a CEO review, poke holes in an approach, think bigger about scope, or decide whether to expand or reduce the plan."
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "gstack-openclaw-investigate",
+        "Name":  "gstack-openclaw-investigate",
+        "Description":  "Use when asked to debug, fix a bug, investigate an error, or do root cause analysis, and when users report errors, stack traces, unexpected behavior, or say something stopped working."
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "gstack-openclaw-office-hours",
+        "Name":  "gstack-openclaw-office-hours",
+        "Description":  "Use when asked to brainstorm, evaluate whether an idea is worth building, run office hours, or think through a new product idea or design direction before any code is written."
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "gstack-openclaw-retro",
+        "Name":  "gstack-openclaw-retro",
+        "Description":  "Weekly engineering retrospective. Analyzes commit history, work patterns, and code quality metrics with persistent history and trend tracking. Team-aware with per-person contributions, praise, and growth areas. Use when asked for weekly retro, what shipped this week, or engineering retrospective."
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "pair-agent",
+        "Name":  "pair-agent",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "plan-ceo-review",
+        "Name":  "plan-ceo-review",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "plan-design-review",
+        "Name":  "plan-design-review",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "plan-devex-review",
+        "Name":  "plan-devex-review",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "plan-eng-review",
+        "Name":  "plan-eng-review",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "plan-tune",
+        "Name":  "plan-tune",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "qa",
+        "Name":  "qa",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "qa-only",
+        "Name":  "qa-only",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "retro",
+        "Name":  "retro",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "review",
+        "Name":  "review",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "scrape",
+        "Name":  "scrape",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "setup-browser-cookies",
+        "Name":  "setup-browser-cookies",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "setup-deploy",
+        "Name":  "setup-deploy",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "setup-gbrain",
+        "Name":  "setup-gbrain",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "ship",
+        "Name":  "ship",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "skillify",
+        "Name":  "skillify",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "sync-gbrain",
+        "Name":  "sync-gbrain",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Gstack - garrytan",
+        "Folder":  "unfreeze",
+        "Name":  "unfreeze",
+        "Description":  "|"
+    },
+    {
+        "Group":  "Matt Pocock",
+        "Folder":  "design-an-interface",
+        "Name":  "design-an-interface",
+        "Description":  "Generate multiple radically different interface designs for a module using parallel sub-agents. Use when user wants to design an API, explore interface options, compare module shapes, or mentions \"design it twice\"."
+    },
+    {
+        "Group":  "Matt Pocock",
+        "Folder":  "request-refactor-plan",
+        "Name":  "request-refactor-plan",
+        "Description":  "Create a detailed refactor plan with tiny commits via user interview, then file it as a GitHub issue. Use when user wants to plan a refactor, create a refactoring RFC, or break a refactor into safe incremental steps."
+    },
+    {
+        "Group":  "Matt Pocock",
+        "Folder":  "ubiquitous-language",
+        "Name":  "ubiquitous-language",
+        "Description":  "Extract a DDD-style ubiquitous language glossary from the current conversation, flagging ambiguities and proposing canonical terms. Saves to UBIQUITOUS_LANGUAGE.md. Use when user wants to define domain terms, build a glossary, harden terminology, create a ubiquitous language, or mentions \"domain model\" or \"DDD\"."
+    },
+    {
+        "Group":  "Matt Pocock",
+        "Folder":  "diagnose",
+        "Name":  "diagnose",
+        "Description":  "Disciplined diagnosis loop for hard bugs and performance regressions. Reproduce 鈫?minimise 鈫?hypothesise 鈫?instrument 鈫?fix 鈫?regression-test. Use when user says \"diagnose this\" / \"debug this\", reports a bug, says something is broken/throwing/failing, or describes a performance regression."
+    },
+    {
+        "Group":  "Matt Pocock",
+        "Folder":  "grill-with-docs",
+        "Name":  "grill-with-docs",
+        "Description":  "Grilling session that challenges your plan against the existing domain model, sharpens terminology, and updates documentation (CONTEXT.md, ADRs) inline as decisions crystallise. Use when user wants to stress-test a plan against their project\u0027s language and documented decisions."
+    },
+    {
+        "Group":  "Matt Pocock",
+        "Folder":  "improve-codebase-architecture",
+        "Name":  "improve-codebase-architecture",
+        "Description":  "Find deepening opportunities in a codebase, informed by the domain language in CONTEXT.md and the decisions in docs/adr/. Use when the user wants to improve architecture, find refactoring opportunities, consolidate tightly-coupled modules, or make a codebase more testable and AI-navigable."
+    },
+    {
+        "Group":  "Matt Pocock",
+        "Folder":  "prototype",
+        "Name":  "prototype",
+        "Description":  "Build a throwaway prototype to flesh out a design before committing to it. Routes between two branches 鈥?a runnable terminal app for state/business-logic questions, or several radically different UI variations toggleable from one route. Use when the user wants to prototype, sanity-check a data model or state machine, mock up a UI, explore design options, or says \"prototype this\", \"let me play with it\", \"try a few designs\"."
+    },
+    {
+        "Group":  "Matt Pocock",
+        "Folder":  "setup-matt-pocock-skills",
+        "Name":  "setup-matt-pocock-skills",
+        "Description":  "Sets up an `## Agent skills` block in AGENTS.md/CLAUDE.md and `docs/agents/` so the engineering skills know this repo\u0027s issue tracker (GitHub or local markdown), triage label vocabulary, and domain doc layout. Run before first use of `to-issues`, `to-prd`, `triage`, `diagnose`, `tdd`, `improve-codebase-architecture`, or `zoom-out` 鈥?or if those skills appear to be missing context about the issue tracker, triage labels, or domain docs."
+    },
+    {
+        "Group":  "Matt Pocock",
+        "Folder":  "tdd",
+        "Name":  "tdd",
+        "Description":  "Test-driven development with red-green-refactor loop. Use when user wants to build features or fix bugs using TDD, mentions \"red-green-refactor\", wants integration tests, or asks for test-first development."
+    },
+    {
+        "Group":  "Matt Pocock",
+        "Folder":  "to-issues",
+        "Name":  "to-issues",
+        "Description":  "Break a plan, spec, or PRD into independently-grabbable issues on the project issue tracker using tracer-bullet vertical slices. Use when user wants to convert a plan into issues, create implementation tickets, or break down work into issues."
+    },
+    {
+        "Group":  "Matt Pocock",
+        "Folder":  "to-prd",
+        "Name":  "to-prd",
+        "Description":  "Turn the current conversation context into a PRD and publish it to the project issue tracker. Use when user wants to create a PRD from the current context."
+    },
+    {
+        "Group":  "Matt Pocock",
+        "Folder":  "triage",
+        "Name":  "triage",
+        "Description":  "Triage issues through a state machine driven by triage roles. Use when user wants to create an issue, triage issues, review incoming bugs or feature requests, prepare issues for an AFK agent, or manage issue workflow."
+    },
+    {
+        "Group":  "Matt Pocock",
+        "Folder":  "zoom-out",
+        "Name":  "zoom-out",
+        "Description":  "Tell the agent to zoom out and give broader context or a higher-level perspective. Use when you\u0027re unfamiliar with a section of code or need to understand how it fits into the bigger picture."
+    },
+    {
+        "Group":  "Matt Pocock",
+        "Folder":  "writing-beats",
+        "Name":  "writing-beats",
+        "Description":  "Shape an article as a journey of beats, choose-your-own-adventure style. The user picks a starting beat from the raw material, you write only that beat, then offer options for where to pivot next, beat by beat, until the article reaches a natural end. Use when the user has raw material and wants to assemble it as a narrative rather than an argument."
+    },
+    {
+        "Group":  "Matt Pocock",
+        "Folder":  "writing-fragments",
+        "Name":  "writing-fragments",
+        "Description":  "Grilling session that mines the user for fragments 鈥?heterogeneous nuggets of writing (claims, vignettes, sharp sentences, half-thoughts) 鈥?and appends them to a single document as raw material for a future article. Use when the user wants to develop ideas before imposing structure, or mentions \"fragments\", \"ideate\", or \"raw material\" for writing."
+    },
+    {
+        "Group":  "Matt Pocock",
+        "Folder":  "writing-shape",
+        "Name":  "writing-shape",
+        "Description":  "Take a markdown file of raw material and shape it into an article through a conversational session 鈥?drafting candidate openings, growing the piece paragraph by paragraph, arguing about format (lists, tables, callouts, quotes) at each step. Use when the user has a pile of notes, fragments, or a rough draft and wants help turning it into something publishable."
+    },
+    {
+        "Group":  "Matt Pocock",
+        "Folder":  "git-guardrails-claude-code",
+        "Name":  "git-guardrails-claude-code",
+        "Description":  "Set up Claude Code hooks to block dangerous git commands (push, reset --hard, clean, branch -D, etc.) before they execute. Use when user wants to prevent destructive git operations, add git safety hooks, or block git push/reset in Claude Code."
+    },
+    {
+        "Group":  "Matt Pocock",
+        "Folder":  "migrate-to-shoehorn",
+        "Name":  "migrate-to-shoehorn",
+        "Description":  "Migrate test files from `as` type assertions to @total-typescript/shoehorn. Use when user mentions shoehorn, wants to replace `as` in tests, or needs partial test data."
+    },
+    {
+        "Group":  "Matt Pocock",
+        "Folder":  "scaffold-exercises",
+        "Name":  "scaffold-exercises",
+        "Description":  "Create exercise directory structures with sections, problems, solutions, and explainers that pass linting. Use when user wants to scaffold exercises, create exercise stubs, or set up a new course section."
+    },
+    {
+        "Group":  "Matt Pocock",
+        "Folder":  "setup-pre-commit",
+        "Name":  "setup-pre-commit",
+        "Description":  "Set up Husky pre-commit hooks with lint-staged (Prettier), type checking, and tests in the current repo. Use when user wants to add pre-commit hooks, set up Husky, configure lint-staged, or add commit-time formatting/typechecking/testing."
+    },
+    {
+        "Group":  "Matt Pocock",
+        "Folder":  "edit-article",
+        "Name":  "edit-article",
+        "Description":  "Edit and improve articles by restructuring sections, improving clarity, and tightening prose. Use when user wants to edit, revise, or improve an article draft."
+    },
+    {
+        "Group":  "Matt Pocock",
+        "Folder":  "obsidian-vault",
+        "Name":  "obsidian-vault",
+        "Description":  "Search, create, and manage notes in the Obsidian vault with wikilinks and index notes. Use when user wants to find, create, or organize notes in Obsidian."
+    },
+    {
+        "Group":  "Matt Pocock",
+        "Folder":  "caveman",
+        "Name":  "caveman",
+        "Description":  "\u003e"
+    },
+    {
+        "Group":  "Matt Pocock",
+        "Folder":  "grill-me",
+        "Name":  "grill-me",
+        "Description":  "Interview the user relentlessly about a plan or design until reaching shared understanding, resolving each branch of the decision tree. Use when user wants to stress-test a plan, get grilled on their design, or mentions \"grill me\"."
+    },
+    {
+        "Group":  "Matt Pocock",
+        "Folder":  "handoff",
+        "Name":  "handoff",
+        "Description":  "Compact the current conversation into a handoff document for another agent to pick up."
+    },
+    {
+        "Group":  "Matt Pocock",
+        "Folder":  "write-a-skill",
+        "Name":  "skill-name",
+        "Description":  "Brief description of capability. Use when [specific triggers]."
+    },
+    {
+        "Group":  "Matt Pocock",
+        "Folder":  "matt-pocock-skills",
+        "Name":  "matt-pocock-skills",
+        "Description":  "Matt Pocock skill collection wrapper for skills that cannot be installed as top-level Codex skills because their names conflict with existing installed skills. Use when the user specifically asks for Matt Pocock\u0027s qa or review skill content, or wants to inspect the Matt Pocock skill collection."
+    },
+    {
+        "Group":  "UI UX Pro Max - nextlevelbuilder",
+        "Folder":  "ui-ux-pro-max",
+        "Name":  "ui-ux-pro-max",
+        "Description":  "UI/UX design intelligence for web and mobile. Includes 50+ styles, 161 color palettes, 57 font pairings, 161 product types, 99 UX guidelines, and 25 chart types across 10 stacks (React, Next.js, Vue, Svelte, SwiftUI, React Native, Flutter, Tailwind, shadcn/ui, and HTML/CSS). Actions: plan, build, create, design, implement, review, fix, improve, optimize, enhance, refactor, and check UI/UX code. Projects: website, landing page, dashboard, admin panel, e-commerce, SaaS, portfolio, blog, and mobile app. Elements: button, modal, navbar, sidebar, card, table, form, and chart. Styles: glassmorphism, claymorphism, minimalism, brutalism, neumorphism, bento grid, dark mode, responsive, skeuomorphism, and flat design. Topics: color systems, accessibility, animation, layout, typography, font pairing, spacing, interaction states, shadow, and gradient. Integrations: shadcn/ui MCP for component search and examples."
+    },
+    {
+        "Group":  "UI UX Pro Max - nextlevelbuilder",
+        "Folder":  "ckm-banner-design",
+        "Name":  "ckm:banner-design",
+        "Description":  "Design banners for social media, ads, website heroes, creative assets, and print. Multiple art direction options with AI-generated visuals. Actions: design, create, generate banner. Platforms: Facebook, Twitter/X, LinkedIn, YouTube, Instagram, Google Display, website hero, print. Styles: minimalist, gradient, bold typography, photo-based, illustrated, geometric, retro, glassmorphism, 3D, neon, duotone, editorial, collage. Uses ui-ux-pro-max, frontend-design, ai-artist, ai-multimodal skills."
+    },
+    {
+        "Group":  "UI UX Pro Max - nextlevelbuilder",
+        "Folder":  "ckm-brand",
+        "Name":  "ckm:brand",
+        "Description":  "Brand voice, visual identity, messaging frameworks, asset management, brand consistency. Activate for branded content, tone of voice, marketing assets, brand compliance, style guides."
+    },
+    {
+        "Group":  "UI UX Pro Max - nextlevelbuilder",
+        "Folder":  "ckm-design",
+        "Name":  "ckm:design",
+        "Description":  "Comprehensive design skill: brand identity, design tokens, UI styling, logo generation (55 styles, Gemini AI), corporate identity program (50 deliverables, CIP mockups), HTML presentations (Chart.js), banner design (22 styles, social/ads/web/print), icon design (15 styles, SVG, Gemini 3.1 Pro), social photos (HTML鈫抯creenshot, multi-platform). Actions: design logo, create CIP, generate mockups, build slides, design banner, generate icon, create social photos, social media images, brand identity, design system. Platforms: Facebook, Twitter, LinkedIn, YouTube, Instagram, Pinterest, TikTok, Threads, Google Ads."
+    },
+    {
+        "Group":  "UI UX Pro Max - nextlevelbuilder",
+        "Folder":  "ckm-design-system",
+        "Name":  "ckm:design-system",
+        "Description":  "Token architecture, component specifications, and slide generation. Three-layer tokens (primitive鈫抯emantic鈫抍omponent), CSS variables, spacing/typography scales, component specs, strategic slide creation. Use for design tokens, systematic design, brand-compliant presentations."
+    },
+    {
+        "Group":  "UI UX Pro Max - nextlevelbuilder",
+        "Folder":  "ckm-slides",
+        "Name":  "ckm:slides",
+        "Description":  "Create strategic HTML presentations with Chart.js, design tokens, responsive layouts, copywriting formulas, and contextual slide strategies."
+    },
+    {
+        "Group":  "UI UX Pro Max - nextlevelbuilder",
+        "Folder":  "ckm-ui-styling",
+        "Name":  "ckm:ui-styling",
+        "Description":  "Create beautiful, accessible user interfaces with shadcn/ui components (built on Radix UI + Tailwind), Tailwind CSS utility-first styling, and canvas-based visual designs. Use when building user interfaces, implementing design systems, creating responsive layouts, adding accessible components (dialogs, dropdowns, forms, tables), customizing themes and colors, implementing dark mode, generating visual designs and posters, or establishing consistent styling patterns across applications."
+    },
+    {
+        "Group":  "Baoyu Skills - JimLiu",
+        "Folder":  "baoyu-article-illustrator",
+        "Name":  "baoyu-article-illustrator",
+        "Description":  "Analyzes article structure, identifies positions requiring visual aids, generates illustrations with Type 脳 Style 脳 Palette three-dimension approach. Use when user asks to \"illustrate article\", \"add images\", \"generate images for article\", or \"涓烘枃绔犻厤鍥?."
+    },
+    {
+        "Group":  "Baoyu Skills - JimLiu",
+        "Folder":  "baoyu-comic",
+        "Name":  "baoyu-comic",
+        "Description":  "Knowledge comic creator supporting multiple art styles and tones. Creates original educational comics with detailed panel layouts and batch-capable image generation. Use when user asks to create \"鐭ヨ瘑婕敾\", \"鏁欒偛婕敾\", \"biography comic\", \"tutorial comic\", or \"Logicomix-style comic\"."
+    },
+    {
+        "Group":  "Baoyu Skills - JimLiu",
+        "Folder":  "baoyu-compress-image",
+        "Name":  "baoyu-compress-image",
+        "Description":  "Compresses images to WebP (default) or PNG with automatic tool selection. Use when user asks to \"compress image\", \"optimize image\", \"convert to webp\", or reduce image file size."
+    },
+    {
+        "Group":  "Baoyu Skills - JimLiu",
+        "Folder":  "baoyu-cover-image",
+        "Name":  "baoyu-cover-image",
+        "Description":  "Generates article cover images with 5 dimensions (type, palette, rendering, text, mood) combining 11 color palettes and 7 rendering styles. Supports cinematic (2.35:1), widescreen (16:9), and square (1:1) aspects. Use when user asks to \"generate cover image\", \"create article cover\", or \"make cover\"."
+    },
+    {
+        "Group":  "Baoyu Skills - JimLiu",
+        "Folder":  "baoyu-danger-gemini-web",
+        "Name":  "baoyu-danger-gemini-web",
+        "Description":  "Generates images and text via reverse-engineered Gemini Web API. Supports text generation, image generation from prompts, reference images for vision input, and multi-turn conversations. Use when other skills need image generation backend, or when user requests \"generate image with Gemini\", \"Gemini text generation\", or needs vision-capable AI generation."
+    },
+    {
+        "Group":  "Baoyu Skills - JimLiu",
+        "Folder":  "baoyu-danger-x-to-markdown",
+        "Name":  "baoyu-danger-x-to-markdown",
+        "Description":  "Converts X (Twitter) tweets and articles to markdown with YAML front matter. Uses reverse-engineered API requiring user consent. Use when user mentions \"X to markdown\", \"tweet to markdown\", \"save tweet\", or provides x.com/twitter.com URLs for conversion."
+    },
+    {
+        "Group":  "Baoyu Skills - JimLiu",
+        "Folder":  "baoyu-diagram",
+        "Name":  "baoyu-diagram",
+        "Description":  "Create professional, dark-themed SVG diagrams of any type 鈥?architecture diagrams, flowcharts, sequence diagrams, structural diagrams, mind maps, timelines, illustrative/conceptual diagrams, and more. Use this skill whenever the user asks for any kind of technical or conceptual diagram, visualization of a system, process flow, data flow, component relationship, network topology, decision tree, org chart, state machine, or any visual representation of structure/logic/process. Also trigger when the user says \"鐢讳釜鍥? \"鐢讳竴涓灦鏋勫浘\" \"diagram\" \"flowchart\" \"sequence diagram\" \"draw me a ...\" or uploads content and asks to visualize it. Output is always a standalone .svg file."
+    },
+    {
+        "Group":  "Baoyu Skills - JimLiu",
+        "Folder":  "baoyu-format-markdown",
+        "Name":  "baoyu-format-markdown",
+        "Description":  "Formats plain text or markdown files with frontmatter, titles, summaries, headings, bold, lists, and code blocks. Use when user asks to \"format markdown\", \"beautify article\", \"add formatting\", or improve article layout. Outputs to {filename}-formatted.md."
+    },
+    {
+        "Group":  "Baoyu Skills - JimLiu",
+        "Folder":  "baoyu-image-cards",
+        "Name":  "baoyu-image-cards",
+        "Description":  "Generates infographic image card series with 12 visual styles, 8 layouts, and 3 color palettes. Breaks content into 1-10 cartoon-style image cards optimized for social media engagement. Use when user mentions \"灏忕孩涔﹀浘鐗?, \"灏忕孩涔︾鑽?, \"灏忕豢涔?, \"寰俊鍥炬枃\", \"寰俊璐村浘\", \"image cards\", \"鍥剧墖鍗＄墖\", or wants social media infographic series."
+    },
+    {
+        "Group":  "Baoyu Skills - JimLiu",
+        "Folder":  "baoyu-image-gen",
+        "Name":  "baoyu-image-gen",
+        "Description":  "[Deprecated: use baoyu-imagine] AI image generation with OpenAI, Azure OpenAI, Google, OpenRouter, DashScope, Z.AI GLM-Image, MiniMax, Jimeng, Seedream and Replicate APIs. Supports text-to-image, reference images, aspect ratios, and batch generation from saved prompt files. Sequential by default; use batch parallel generation when the user already has multiple prompts or wants stable multi-image throughput. Use when user asks to generate, create, or draw images."
+    },
+    {
+        "Group":  "Baoyu Skills - JimLiu",
+        "Folder":  "baoyu-imagine",
+        "Name":  "baoyu-imagine",
+        "Description":  "AI image generation with OpenAI GPT Image 2, Azure OpenAI, Google, OpenRouter, DashScope, Z.AI GLM-Image, MiniMax, Jimeng, Seedream and Replicate APIs. Supports text-to-image, reference images, aspect ratios, and batch generation from saved prompt files. Sequential by default; use batch parallel generation when the user already has multiple prompts or wants stable multi-image throughput. Use when user asks to generate, create, or draw images."
+    },
+    {
+        "Group":  "Baoyu Skills - JimLiu",
+        "Folder":  "baoyu-infographic",
+        "Name":  "baoyu-infographic",
+        "Description":  "Generate professional infographics with 21 layout types and 22 visual styles. Analyzes content, recommends layout脳style combinations, and generates publication-ready infographics. Use when user asks to create \"infographic\", \"淇℃伅鍥?, \"visual summary\", \"鍙鍖?, or \"楂樺瘑搴︿俊鎭ぇ鍥?."
+    },
+    {
+        "Group":  "Baoyu Skills - JimLiu",
+        "Folder":  "baoyu-markdown-to-html",
+        "Name":  "baoyu-markdown-to-html",
+        "Description":  "Converts Markdown to styled HTML with WeChat-compatible themes. Supports code highlighting, math, PlantUML, footnotes, alerts, infographics, and optional bottom citations for external links. Use when user asks for \"markdown to html\", \"convert md to html\", \"md 杞?html\", \"寰俊澶栭摼杞簳閮ㄥ紩鐢?, or needs styled HTML output from markdown."
+    },
+    {
+        "Group":  "Baoyu Skills - JimLiu",
+        "Folder":  "baoyu-post-to-wechat",
+        "Name":  "baoyu-post-to-wechat",
+        "Description":  "Posts content to WeChat Official Account (寰俊鍏紬鍙? via API or Chrome CDP. Supports article posting (鏂囩珷) with HTML, markdown, or plain text input, and image-text posting (璐村浘, formerly 鍥炬枃) with multiple images. Markdown article workflows default to converting ordinary external links into bottom citations for WeChat-friendly output. Use when user mentions \"鍙戝竷鍏紬鍙?, \"post to wechat\", \"寰俊鍏紬鍙?, or \"璐村浘/鍥炬枃/鏂囩珷\"."
+    },
+    {
+        "Group":  "Baoyu Skills - JimLiu",
+        "Folder":  "baoyu-post-to-weibo",
+        "Name":  "baoyu-post-to-weibo",
+        "Description":  "Posts content to Weibo (寰崥). Supports regular posts with text, images, and videos, and headline articles (澶存潯鏂囩珷) with Markdown input via Chrome CDP. Use when user asks to \"post to Weibo\", \"鍙戝井鍗?, \"鍙戝竷寰崥\", \"publish to Weibo\", \"share on Weibo\", \"鍐欏井鍗?, or \"寰崥澶存潯鏂囩珷\"."
+    },
+    {
+        "Group":  "Baoyu Skills - JimLiu",
+        "Folder":  "baoyu-post-to-x",
+        "Name":  "baoyu-post-to-x",
+        "Description":  "Posts content and articles to X (Twitter). Supports regular posts with images/videos and X Articles (long-form Markdown). In Codex, honor explicit requests for the Codex Chrome plugin/@chrome by using the Chrome Extension workflow; otherwise use Chrome Computer Use when available and fall back to real Chrome CDP scripts only when allowed. Use when user asks to \"post to X\", \"tweet\", \"publish to Twitter\", or \"share on X\"."
+    },
+    {
+        "Group":  "Baoyu Skills - JimLiu",
+        "Folder":  "baoyu-slide-deck",
+        "Name":  "baoyu-slide-deck",
+        "Description":  "Generates professional slide deck images from content. Creates outlines with style instructions, then generates individual slide images. Use when user asks to \"create slides\", \"make a presentation\", \"generate deck\", \"slide deck\", or \"PPT\"."
+    },
+    {
+        "Group":  "Baoyu Skills - JimLiu",
+        "Folder":  "baoyu-translate",
+        "Name":  "baoyu-translate",
+        "Description":  "Translates articles and documents between languages with three modes - quick (direct), normal (analyze then translate), and refined (analyze, translate, review, polish). Supports custom glossaries and terminology consistency via EXTEND.md. Use when user asks to \"translate\", \"缈昏瘧\", \"绮剧炕\", \"translate article\", \"translate to Chinese/English\", \"鏀规垚涓枃\", \"鏀规垚鑻辨枃\", \"convert to Chinese\", \"localize\", \"鏈湴鍖?, or needs any document translation. Also triggers for \"refined translation\", \"绮剧粏缈昏瘧\", \"proofread translation\", \"蹇€熺炕璇?, \"蹇炕\", \"杩欑瘒鏂囩珷缈昏瘧涓€涓?, or when a URL or file is provided with translation intent."
+    },
+    {
+        "Group":  "Baoyu Skills - JimLiu",
+        "Folder":  "baoyu-url-to-markdown",
+        "Name":  "baoyu-url-to-markdown",
+        "Description":  "Fetch any URL and convert to markdown using baoyu-fetch CLI (Chrome CDP with site-specific adapters). Built-in adapters for X/Twitter, YouTube transcripts, Hacker News threads, and generic pages via Defuddle. Handles login/CAPTCHA via interaction wait modes. Use when user wants to save a webpage as markdown."
+    },
+    {
+        "Group":  "Baoyu Skills - JimLiu",
+        "Folder":  "baoyu-wechat-summary",
+        "Name":  "baoyu-wechat-summary",
+        "Description":  "Summarizes WeChat group chat highlights into a structured digest using the local wx-cli binary (https://github.com/jackwener/wx-cli). Generates a normal digest by default; a roast (姣掕垖) version is opt-in. Maintains per-group history (history.json + history-digests.jsonl) and per-user profiles across runs, with privacy guardrails baked in. Use when the user asks to \"鎬荤粨缇よ亰\", \"缇よ亰绮惧崕\", \"缇よ亰鎽樿\", \"summarize group chat\", \"group chat digest\", mentions a WeChat group name with a time range, says \"甯垜鐪嬬湅 XX 缇ゆ渶杩戣亰浜嗕粈涔?, \"XX 缇ゆ湁浠€涔堝€煎緱鐪嬬殑\", or asks to \"鍥炴函鐢诲儚\" / \"鍒濆鍖栫敾鍍? / \"backfill profiles\". Adds the roast version when the user says \"姣掕垖鐗?, \"roast 鐗?, \"鍐嶆潵涓瘨鑸岀殑\", or similar."
+    },
+    {
+        "Group":  "Baoyu Skills - JimLiu",
+        "Folder":  "baoyu-xhs-images",
+        "Name":  "baoyu-xhs-images",
+        "Description":  "[Deprecated: use baoyu-image-cards] Generates Xiaohongshu (Little Red Book) image card series with 12 visual styles, 8 layouts, and 3 color palettes. Breaks content into 1-10 cartoon-style image cards optimized for XHS engagement. Use when user mentions \\\"灏忕孩涔﹀浘鐗嘰\", \\\"XHS images\\\", \\\"RedNote infographics\\\", \\\"灏忕孩涔︾鑽塡\", \\\"灏忕豢涔\", \\\"寰俊鍥炬枃\\\", \\\"寰俊璐村浘\\\", or wants social media infographic series for Chinese platforms."
+    },
+    {
+        "Group":  "Baoyu Skills - JimLiu",
+        "Folder":  "baoyu-youtube-transcript",
+        "Name":  "baoyu-youtube-transcript",
+        "Description":  "Downloads YouTube video transcripts/subtitles and cover images by URL or video ID. Supports multiple languages, translation, chapters, and speaker identification. Caches raw data for fast re-formatting. Use when user asks to \"get YouTube transcript\", \"download subtitles\", \"get captions\", \"YouTube瀛楀箷\", \"YouTube灏侀潰\", \"瑙嗛灏侀潰\", \"video thumbnail\", \"video cover image\", or provides a YouTube URL and wants the transcript/subtitle text or cover image extracted."
+    }
+]
