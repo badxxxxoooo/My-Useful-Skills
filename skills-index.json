@@ -736,5 +736,29 @@
         "Folder":  "baoyu-youtube-transcript",
         "Name":  "baoyu-youtube-transcript",
         "Description":  "Downloads YouTube video transcripts/subtitles and cover images by URL or video ID. Supports multiple languages, translation, chapters, and speaker identification. Caches raw data for fast re-formatting. Use when user asks to \"get YouTube transcript\", \"download subtitles\", \"get captions\", \"YouTube瀛楀箷\", \"YouTube灏侀潰\", \"瑙嗛灏侀潰\", \"video thumbnail\", \"video cover image\", or provides a YouTube URL and wants the transcript/subtitle text or cover image extracted."
+    },
+    {
+        "Group":  "Additional Installed Skills",
+        "Folder":  "frontend-design",
+        "Name":  "frontend-design",
+        "Description":  "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications."
+    },
+    {
+        "Group":  "Additional Installed Skills",
+        "Folder":  "pdf",
+        "Name":  "pdf",
+        "Description":  "Use when tasks involve reading, creating, or reviewing PDF files where rendering and layout matter; prefer visual checks by rendering pages and use PDF tooling for generation and extraction."
+    },
+    {
+        "Group":  "Additional Installed Skills",
+        "Folder":  "playwright",
+        "Name":  "playwright",
+        "Description":  "Use when the task requires automating a real browser from the terminal via `playwright-cli` or the bundled wrapper script."
+    },
+    {
+        "Group":  "Additional Installed Skills",
+        "Folder":  "skill-creator",
+        "Name":  "skill-creator",
+        "Description":  "Create new skills, modify and improve existing skills, and measure skill performance."
     }
 ]

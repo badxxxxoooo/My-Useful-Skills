@@ -25,6 +25,8 @@ This repository packages skills from third-party or personal-developer sources. 
 - Matt Pocock: `mattpocock/skills`
 - UI/UX Pro Max: `nextlevelbuilder/ui-ux-pro-max-skill`
 - Baoyu Skills: `JimLiu/baoyu-skills`
+- Microsoft Playwright CLI: `microsoft/playwright-cli`
+- Additional local Codex skills: manually backed up from installed local skills
 
 ## 来源说明
 
@@ -60,6 +62,10 @@ This repository packages skills from third-party or personal-developer sources. 
 ### Baoyu Skills - JimLiu
 
 适合内容创作和中文互联网发布场景，包括翻译、Markdown 格式化、图片生成、漫画、图文卡片、信息图、幻灯片、YouTube 字幕、微信/微博/X/小红书发布等。
+
+### Additional Installed Skills
+
+Supplemental local skills backed up from this Codex install that were not yet included in the original third-party source groups.
 
 ## Skill Index
 
@@ -178,6 +184,13 @@ This repository packages skills from third-party or personal-developer sources. 
 - [`ckm-design-system`](skills/ckm-design-system/SKILL.md): **ckm:design-system** - Token architecture, component specifications, and slide generation. Three-layer tokens (primitive鈫抯emantic鈫抍omponent), CSS variables, spacing/typography scales, component specs, strategic slide creation. Use for design tokens, systematic design, brand-compliant presentations.
 - [`ckm-slides`](skills/ckm-slides/SKILL.md): **ckm:slides** - Create strategic HTML presentations with Chart.js, design tokens, responsive layouts, copywriting formulas, and contextual slide strategies.
 - [`ckm-ui-styling`](skills/ckm-ui-styling/SKILL.md): **ckm:ui-styling** - Create beautiful, accessible user interfaces with shadcn/ui components (built on Radix UI + Tailwind), Tailwind CSS utility-first styling, and canvas-based visual designs. Use when building user interfaces, implementing design systems, creating responsive layouts, adding accessible components (dialogs, dropdowns, forms, tables), customizing themes and colors, implementing dark mode, generating visual designs and posters, or establishing consistent styling patterns across applications.
+
+### Additional Installed Skills
+
+- [`frontend-design`](skills/frontend-design/SKILL.md): **frontend-design** - Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications.
+- [`pdf`](skills/pdf/SKILL.md): **pdf** - Use when tasks involve reading, creating, or reviewing PDF files where rendering and layout matter; prefer visual checks by rendering pages and use PDF tooling for generation and extraction.
+- [`playwright`](skills/playwright/SKILL.md): **playwright** - Use when the task requires automating a real browser from the terminal via `playwright-cli` or the bundled wrapper script.
+- [`skill-creator`](skills/skill-creator/SKILL.md): **skill-creator** - Create new skills, modify and improve existing skills, and measure skill performance.
 
 ### Baoyu Skills - JimLiu
 
