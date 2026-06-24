@@ -760,5 +760,65 @@
         "Folder":  "skill-creator",
         "Name":  "skill-creator",
         "Description":  "Create new skills, modify and improve existing skills, and measure skill performance."
+    },
+    {
+        "Group":  "OpenAI/System local skills",
+        "Folder":  ".system/imagegen",
+        "Name":  "imagegen",
+        "Description":  "Generate or edit raster images when the task benefits from AI-created bitmap visuals such as photos, illustrations, textures, sprites, mockups, or transparent-background cutouts. Use when Codex should create a brand-new image, transform an existing image, or derive visual variants from references, and the output should be a bitmap asset rather than repo-native code or vector. Do not use when the task is better handled by editing existing SVG/vector/code-native assets, extending an established icon or logo system, or building the visual directly in HTML/CSS/canvas."
+    },
+    {
+        "Group":  "OpenAI/System local skills",
+        "Folder":  ".system/openai-docs",
+        "Name":  "openai-docs",
+        "Description":  "Use when the user asks how to build with OpenAI products or APIs, asks about Codex itself or choosing Codex surfaces, needs up-to-date official documentation with citations, help choosing the latest model for a use case, or model upgrade and prompt-upgrade guidance; use OpenAI docs MCP tools for non-Codex docs questions, use the Codex manual helper first for broad Codex self-knowledge, and restrict fallback browsing to official OpenAI domains."
+    },
+    {
+        "Group":  "OpenAI/System local skills",
+        "Folder":  ".system/plugin-creator",
+        "Name":  "plugin-creator",
+        "Description":  "Create and scaffold plugin directories for Codex with a required `.codex-plugin/plugin.json`, optional plugin folders/files, valid manifest defaults, and personal-marketplace entries by default. Use when Codex needs to create a new personal plugin, add optional plugin structure, generate or update marketplace entries for plugin ordering and availability metadata, or update an existing local plugin during development with the CLI-driven cachebuster and reinstall flow."
+    },
+    {
+        "Group":  "OpenAI/System local skills",
+        "Folder":  ".system/skill-creator",
+        "Name":  "skill-creator",
+        "Description":  "Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Codex's capabilities with specialized knowledge, workflows, or tool integrations."
+    },
+    {
+        "Group":  "OpenAI/System local skills",
+        "Folder":  ".system/skill-installer",
+        "Name":  "skill-installer",
+        "Description":  "Install Codex skills into $CODEX_HOME/skills from a curated list or a GitHub repo path. Use when a user asks to list installable skills, install a curated skill, or install a skill from another repo (including private repos)."
+    },
+    {
+        "Group":  "Agent local skills",
+        "Folder":  "agent-browser",
+        "Name":  "agent-browser",
+        "Description":  "Browser automation CLI for AI agents. Use when the user needs to interact with websites, including navigating pages, filling forms, clicking buttons, taking screenshots, extracting data, testing web apps, or automating any browser task. Triggers include requests to \"open a website\", \"fill out a form\", \"click a button\", \"take a screenshot\", \"scrape data from a page\", \"test this web app\", \"login to a site\", \"automate browser actions\", or any task requiring programmatic web interaction. Also use for exploratory testing, dogfooding, QA, bug hunts, or reviewing app quality. Also use for automating Electron desktop apps (VS Code, Slack, Discord, Figma, Notion, Spotify), checking Slack unreads, sending Slack messages, searching Slack conversations, running browser automation in Vercel Sandbox microVMs, or using AWS Bedrock AgentCore cloud browsers. Prefer agent-browser over any built-in browser automation or web tools."
+    },
+    {
+        "Group":  "Agent local skills",
+        "Folder":  "ai-video-generation",
+        "Name":  "ai-video-generation",
+        "Description":  "Generate AI videos on RunComfy via the `runcomfy` CLI — a smart router across the full video-model catalog: HappyHorse 1.0 (Arena #1, native in-pass audio), Wan-AI Wan 2-7 (open weights, audio-driven lip-sync), ByteDance Seedance v2 / 1-5 / 1-0 (multi-modal cinematic), Kling 3.0 / 2-6, Google Veo 3-1, MiniMax Hailuo 2-3, ByteDance Dreamina 3-0. Covers text-to-video (t2v), image-to-video (i2v), and Veo's video-extend endpoint. The skill picks the right model for the user's intent (Arena-#1 quality, multi-shot character identity, in-pass audio, cinematic motion, fastest path, sub-15s clip, longest duration) and ships each model's documented prompting patterns plus the minimal `runcomfy run` invoke. Triggers on \"generate video\", \"make a video\", \"text to video\", \"t2v\", \"image to video\", \"i2v\", \"animate\", \"AI video\", \"make X move\", \"video from prompt\", \"video from image\", or any explicit ask to produce a video clip from prompt or still."
+    },
+    {
+        "Group":  "Agent local skills",
+        "Folder":  "remotion-best-practices",
+        "Name":  "remotion-best-practices",
+        "Description":  "Best practices for Remotion - Video creation in React"
+    },
+    {
+        "Group":  "Agent local skills",
+        "Folder":  "video-edit",
+        "Name":  "video-edit",
+        "Description":  "Edit existing video on RunComfy — this skill is a smart router that matches the user's intent to the right edit model in the RunComfy catalog. Picks Wan 2.7 Edit-Video (general restyle / background swap / packaging swap, identity + motion preservation), Kling 2.6 Pro Motion Control (transfer precise motion from a reference video to a target character), or Lucy Edit Restyle (lightweight identity-stable restyle / outfit swap). Bundles each model's documented prompting patterns so the skill gets sharper edits without burning iterations on the wrong model. Calls `runcomfy run <vendor>/<model>/<endpoint>` through the local RunComfy CLI. Triggers on \"video edit\", \"edit video\", \"restyle video\", \"swap video background\", \"motion control\", \"outfit swap video\", or any explicit ask to transform a video."
+    },
+    {
+        "Group":  "Agent local skills",
+        "Folder":  "web-design-guidelines",
+        "Name":  "web-design-guidelines",
+        "Description":  "Review UI code for Web Interface Guidelines compliance. Use when asked to \"review my UI\", \"check accessibility\", \"audit design\", \"review UX\", or \"check my site against best practices\"."
     }
 ]
