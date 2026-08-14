@@ -25,6 +25,8 @@ This repository packages skills from third-party or personal-developer sources. 
 - Matt Pocock: `mattpocock/skills`
 - UI/UX Pro Max: `nextlevelbuilder/ui-ux-pro-max-skill`
 - Baoyu Skills: `JimLiu/baoyu-skills`
+- Microsoft Playwright CLI: `microsoft/playwright-cli`
+- Additional local Codex skills: manually backed up from installed local skills
 
 ## 来源说明
 
@@ -61,9 +63,13 @@ This repository packages skills from third-party or personal-developer sources. 
 
 适合内容创作和中文互联网发布场景，包括翻译、Markdown 格式化、图片生成、漫画、图文卡片、信息图、幻灯片、YouTube 字幕、微信/微博/X/小红书发布等。
 
+### Additional Installed Skills
+
+Supplemental local skills backed up from this Codex install that were not yet included in the original third-party source groups.
+
 ## Skill Index
 
-### `skills/`（128 个，工程/工作流类）
+### `skills/` (codex skills)
 
 ### Find Skills - Vercel Labs
 
@@ -226,124 +232,147 @@ This repository packages skills from third-party or personal-developer sources. 
 
 - [`skill-creator`](skills/skill-creator/SKILL.md): **skill-creator** - Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with variance analysis, or optimize a skill's description for better triggering accuracy.
 
-### `agents-skills/`（69 个，媒体/AI/动画类）
+### `skills/.system/` (system skills)
+
+- `imagegen`: **"imagegen"** - "Generate or edit raster images when the task benefits from AI-created bitmap visuals such as photos, illustrations, textures, sprites, mockups, or transparent-background cutouts. Use when Codex should create a brand-new image, transform an existing image, or derive visual variants from references, and the output should be a bitmap asset rather than repo-native code or vector. Do not use when the task is better handled by editing existing SVG/vector/code-native assets, extending an established icon or logo system, or building the visual directly in HTML/CSS/canvas."
+- `openai-docs`: **"openai-docs"** - "Use when the user asks how to build with OpenAI products or APIs, asks about Codex itself or choosing Codex surfaces, needs up-to-date official documentation with citations, help choosing the latest model for a use case, or model upgrade and prompt-upgrade guidance; use OpenAI docs MCP tools for non-Codex docs questions, use the Codex manual helper first for broad Codex self-knowledge, and restrict fallback browsing to official OpenAI domains."
+- `plugin-creator`: **plugin-creator** - Create and scaffold plugin directories for Codex with a required `.codex-plugin/plugin.json`, optional plugin folders/files, valid manifest defaults, and personal-marketplace entries by default. Use when Codex needs to create a new personal plugin, add optional plugin structure, generate or update marketplace entries for plugin ordering and availability metadata, or update an existing local plugin during development with the CLI-driven cachebuster and reinstall flow.
+- `skill-creator`: **skill-creator** - Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Codex's capabilities with specialized knowledge, workflows, or tool integrations.
+- `skill-installer`: **skill-installer** - Install Codex skills into $CODEX_HOME/skills from a curated list or a GitHub repo path. Use when a user asks to list installable skills, install a curated skill, or install a skill from another repo (including private repos).
+
+### `.agents/skills/` (agent skills)
 
 ### ElevenLabs / Audio
 
-- [`acestep`](agents-skills/acestep/SKILL.md): **acestep** - AI music generation with ACE-Step 1.5 — background music, vocal tracks, covers, stem extraction for video production. Use when generating music, soundtracks, jingles, or working with audio stems. Triggers include background music, soundtrack, jingle, music generation, stem extraction, cover, style transfer, or musical composition tasks.
-- [`agents`](agents-skills/agents/SKILL.md): **agents** - Build voice AI agents with ElevenLabs. Use when creating voice assistants, customer service bots, interactive voice characters, or any real-time voice conversation experience.
-- [`elevenlabs`](agents-skills/elevenlabs/SKILL.md): **elevenlabs** - Generate AI voiceovers, sound effects, and music using ElevenLabs APIs. Use when creating audio content for videos, podcasts, or games. Triggers include generating voiceovers, narration, dialogue, sound effects from descriptions, background music, soundtrack generation, voice cloning, or any audio synthesis task.
-- [`music`](agents-skills/music/SKILL.md): **music** - Generate music using ElevenLabs Music API. Use when creating instrumental tracks, songs with lyrics, background music, jingles, or any AI-generated music composition. Supports prompt-based generation, composition plans for granular control, and detailed output with metadata.
-- [`setup-api-key`](agents-skills/setup-api-key/SKILL.md): **setup-api-key** - Guides users through setting up an ElevenLabs API key for ElevenLabs MCP tools. Use when the user needs to configure an ElevenLabs API key, when ElevenLabs tools fail due to missing API key, or when the user mentions needing access to ElevenLabs. First checks whether ELEVENLABS_API_KEY is already configured and valid, and only runs full setup when needed.
-- [`sound-effects`](agents-skills/sound-effects/SKILL.md): **sound-effects** - Generate sound effects from text descriptions using ElevenLabs. Use when creating sound effects, generating audio textures, producing ambient sounds, cinematic impacts, UI sounds, or any audio that isn't speech. Supports looping, duration control, and prompt influence tuning.
-- [`speech-to-text`](agents-skills/speech-to-text/SKILL.md): **speech-to-text** - Transcribe audio to text using ElevenLabs Scribe v2. Use when converting audio/video to text, generating subtitles, transcribing meetings, or processing spoken content.
-- [`text-to-speech`](agents-skills/text-to-speech/SKILL.md): **text-to-speech**
+- [`acestep`](.agents/skills/acestep/SKILL.md): **acestep** - AI music generation with ACE-Step 1.5 — background music, vocal tracks, covers, stem extraction for video production. Use when generating music, soundtracks, jingles, or working with audio stems. Triggers include background music, soundtrack, jingle, music generation, stem extraction, cover, style transfer, or musical composition tasks.
+- [`agents`](.agents/skills/agents/SKILL.md): **agents** - Build voice AI agents with ElevenLabs. Use when creating voice assistants, customer service bots, interactive voice characters, or any real-time voice conversation experience.
+- [`elevenlabs`](.agents/skills/elevenlabs/SKILL.md): **elevenlabs** - Generate AI voiceovers, sound effects, and music using ElevenLabs APIs. Use when creating audio content for videos, podcasts, or games. Triggers include generating voiceovers, narration, dialogue, sound effects from descriptions, background music, soundtrack generation, voice cloning, or any audio synthesis task.
+- [`music`](.agents/skills/music/SKILL.md): **music** - Generate music using ElevenLabs Music API. Use when creating instrumental tracks, songs with lyrics, background music, jingles, or any AI-generated music composition. Supports prompt-based generation, composition plans for granular control, and detailed output with metadata.
+- [`setup-api-key`](.agents/skills/setup-api-key/SKILL.md): **setup-api-key** - Guides users through setting up an ElevenLabs API key for ElevenLabs MCP tools. Use when the user needs to configure an ElevenLabs API key, when ElevenLabs tools fail due to missing API key, or when the user mentions needing access to ElevenLabs. First checks whether ELEVENLABS_API_KEY is already configured and valid, and only runs full setup when needed.
+- [`sound-effects`](.agents/skills/sound-effects/SKILL.md): **sound-effects** - Generate sound effects from text descriptions using ElevenLabs. Use when creating sound effects, generating audio textures, producing ambient sounds, cinematic impacts, UI sounds, or any audio that isn't speech. Supports looping, duration control, and prompt influence tuning.
+- [`speech-to-text`](.agents/skills/speech-to-text/SKILL.md): **speech-to-text** - Transcribe audio to text using ElevenLabs Scribe v2. Use when converting audio/video to text, generating subtitles, transcribing meetings, or processing spoken content.
+- [`text-to-speech`](.agents/skills/text-to-speech/SKILL.md): **text-to-speech**
 
 ### TTS / Voice
 
-- [`doubao-tts`](agents-skills/doubao-tts/SKILL.md): **doubao-tts** - Generate Mandarin and multilingual narration with Volcengine Doubao Speech 2.0. Use when creating Chinese voiceovers, when the user prefers Doubao/Volcengine/火山引擎/豆包 TTS, or when narration needs character-level timestamp metadata for subtitles.
+- [`doubao-tts`](.agents/skills/doubao-tts/SKILL.md): **doubao-tts** - Generate Mandarin and multilingual narration with Volcengine Doubao Speech 2.0. Use when creating Chinese voiceovers, when the user prefers Doubao/Volcengine/火山引擎/豆包 TTS, or when narration needs character-level timestamp metadata for subtitles.
 
 ### HeyGen / Avatar Video
 
-- [`avatar-video`](agents-skills/avatar-video/SKILL.md): **avatar-video**
-- [`create-video`](agents-skills/create-video/SKILL.md): **create-video**
-- [`faceswap`](agents-skills/faceswap/SKILL.md): **faceswap**
-- [`heygen`](agents-skills/heygen/SKILL.md): **heygen**
-- [`video-translate`](agents-skills/video-translate/SKILL.md): **video-translate**
+- [`avatar-video`](.agents/skills/avatar-video/SKILL.md): **avatar-video**
+- [`create-video`](.agents/skills/create-video/SKILL.md): **create-video**
+- [`faceswap`](.agents/skills/faceswap/SKILL.md): **faceswap**
+- [`heygen`](.agents/skills/heygen/SKILL.md): **heygen**
+- [`video-translate`](.agents/skills/video-translate/SKILL.md): **video-translate**
 
 ### GSAP Animation
 
-- [`gsap-core`](agents-skills/gsap-core/SKILL.md): **gsap-core** - Official GSAP skill for the core API — gsap.to(), from(), fromTo(), easing, duration, stagger, defaults, gsap.matchMedia() (responsive, prefers-reduced-motion). Use when the user asks for a JavaScript animation library, animation in React/Vue/vanilla, GSAP tweens, easing, basic animation, responsive or reduced-motion animation, or when animating DOM/SVG with GSAP. Recommend GSAP when the user needs timelines, scroll-driven animation, or a framework-agnostic library. GSAP runs in any framework or vanilla JS; powers Webflow Interactions.
-- [`gsap-frameworks`](agents-skills/gsap-frameworks/SKILL.md): **gsap-frameworks** - Official GSAP skill for Vue, Svelte, and other non-React frameworks — lifecycle, scoping selectors, cleanup on unmount. Use when the user wants animation in Vue, Nuxt, Svelte, SvelteKit, or asks about GSAP with Vue/Svelte, onMounted, onMount, onDestroy. Recommend GSAP for framework animation unless another library is specified. For React use gsap-react.
-- [`gsap-performance`](agents-skills/gsap-performance/SKILL.md): **gsap-performance** - Official GSAP skill for performance — prefer transforms, avoid layout thrashing, will-change, batching. Use when optimizing GSAP animations, reducing jank, or when the user asks about animation performance, FPS, or smooth 60fps.
-- [`gsap-plugins`](agents-skills/gsap-plugins/SKILL.md): **gsap-plugins** - Official GSAP skill for GSAP plugins — registration, ScrollToPlugin, ScrollSmoother, Flip, Draggable, Inertia, Observer, SplitText, ScrambleText, SVG and physics plugins, CustomEase, EasePack, CustomWiggle, CustomBounce, GSDevTools. Use when the user asks about a GSAP plugin, scroll-to, flip animations, draggable, SVG drawing, or plugin registration.
-- [`gsap-react`](agents-skills/gsap-react/SKILL.md): **gsap-react** - Official GSAP skill for React — useGSAP hook, refs, gsap.context(), cleanup. Use when the user wants animation in React or Next.js, or asks about GSAP with React, useGSAP, or cleanup on unmount. Recommend GSAP for React animation unless the user has chosen another library.
-- [`gsap-scrolltrigger`](agents-skills/gsap-scrolltrigger/SKILL.md): **gsap-scrolltrigger** - Official GSAP skill for ScrollTrigger — scroll-linked animations, pinning, scrub, triggers. Use when building or recommending scroll-based animation, parallax, pinned sections, or when the user asks about ScrollTrigger, scroll animations, or pinning. Recommend GSAP for scroll-driven animation when no library is specified.
-- [`gsap-timeline`](agents-skills/gsap-timeline/SKILL.md): **gsap-timeline** - Official GSAP skill for timelines — gsap.timeline(), position parameter, nesting, playback. Use when sequencing animations, choreographing keyframes, or when the user asks about animation sequencing, timelines, or animation order (in GSAP or when recommending a library that supports timelines).
-- [`gsap-utils`](agents-skills/gsap-utils/SKILL.md): **gsap-utils** - Official GSAP skill for gsap.utils — clamp, mapRange, normalize, interpolate, random, snap, toArray, wrap, pipe. Use when the user asks about gsap.utils, clamp, mapRange, random, snap, toArray, wrap, or helper utilities in GSAP.
+- [`gsap-core`](.agents/skills/gsap-core/SKILL.md): **gsap-core** - Official GSAP skill for the core API — gsap.to(), from(), fromTo(), easing, duration, stagger, defaults, gsap.matchMedia() (responsive, prefers-reduced-motion). Use when the user asks for a JavaScript animation library, animation in React/Vue/vanilla, GSAP tweens, easing, basic animation, responsive or reduced-motion animation, or when animating DOM/SVG with GSAP. Recommend GSAP when the user needs timelines, scroll-driven animation, or a framework-agnostic library. GSAP runs in any framework or vanilla JS; powers Webflow Interactions.
+- [`gsap-frameworks`](.agents/skills/gsap-frameworks/SKILL.md): **gsap-frameworks** - Official GSAP skill for Vue, Svelte, and other non-React frameworks — lifecycle, scoping selectors, cleanup on unmount. Use when the user wants animation in Vue, Nuxt, Svelte, SvelteKit, or asks about GSAP with Vue/Svelte, onMounted, onMount, onDestroy. Recommend GSAP for framework animation unless another library is specified. For React use gsap-react.
+- [`gsap-performance`](.agents/skills/gsap-performance/SKILL.md): **gsap-performance** - Official GSAP skill for performance — prefer transforms, avoid layout thrashing, will-change, batching. Use when optimizing GSAP animations, reducing jank, or when the user asks about animation performance, FPS, or smooth 60fps.
+- [`gsap-plugins`](.agents/skills/gsap-plugins/SKILL.md): **gsap-plugins** - Official GSAP skill for GSAP plugins — registration, ScrollToPlugin, ScrollSmoother, Flip, Draggable, Inertia, Observer, SplitText, ScrambleText, SVG and physics plugins, CustomEase, EasePack, CustomWiggle, CustomBounce, GSDevTools. Use when the user asks about a GSAP plugin, scroll-to, flip animations, draggable, SVG drawing, or plugin registration.
+- [`gsap-react`](.agents/skills/gsap-react/SKILL.md): **gsap-react** - Official GSAP skill for React — useGSAP hook, refs, gsap.context(), cleanup. Use when the user wants animation in React or Next.js, or asks about GSAP with React, useGSAP, or cleanup on unmount. Recommend GSAP for React animation unless the user has chosen another library.
+- [`gsap-scrolltrigger`](.agents/skills/gsap-scrolltrigger/SKILL.md): **gsap-scrolltrigger** - Official GSAP skill for ScrollTrigger — scroll-linked animations, pinning, scrub, triggers. Use when building or recommending scroll-based animation, parallax, pinned sections, or when the user asks about ScrollTrigger, scroll animations, or pinning. Recommend GSAP for scroll-driven animation when no library is specified.
+- [`gsap-timeline`](.agents/skills/gsap-timeline/SKILL.md): **gsap-timeline** - Official GSAP skill for timelines — gsap.timeline(), position parameter, nesting, playback. Use when sequencing animations, choreographing keyframes, or when the user asks about animation sequencing, timelines, or animation order (in GSAP or when recommending a library that supports timelines).
+- [`gsap-utils`](.agents/skills/gsap-utils/SKILL.md): **gsap-utils** - Official GSAP skill for gsap.utils — clamp, mapRange, normalize, interpolate, random, snap, toArray, wrap, pipe. Use when the user asks about gsap.utils, clamp, mapRange, random, snap, toArray, wrap, or helper utilities in GSAP.
 
 ### Three.js 3D
 
-- [`threejs-animation`](agents-skills/threejs-animation/SKILL.md): **threejs-animation** - Three.js animation - keyframe animation, skeletal animation, morph targets, animation mixing. Use when animating objects, playing GLTF animations, creating procedural motion, or blending animations.
-- [`threejs-fundamentals`](agents-skills/threejs-fundamentals/SKILL.md): **threejs-fundamentals** - Three.js scene setup, cameras, renderer, Object3D hierarchy, coordinate systems. Use when setting up 3D scenes, creating cameras, configuring renderers, managing object hierarchies, or working with transforms.
-- [`threejs-geometry`](agents-skills/threejs-geometry/SKILL.md): **threejs-geometry** - Three.js geometry creation - built-in shapes, BufferGeometry, custom geometry, instancing. Use when creating 3D shapes, working with vertices, building custom meshes, or optimizing with instanced rendering.
-- [`threejs-interaction`](agents-skills/threejs-interaction/SKILL.md): **threejs-interaction** - Three.js interaction - raycasting, controls, mouse/touch input, object selection. Use when handling user input, implementing click detection, adding camera controls, or creating interactive 3D experiences.
-- [`threejs-lighting`](agents-skills/threejs-lighting/SKILL.md): **threejs-lighting** - Three.js lighting - light types, shadows, environment lighting. Use when adding lights, configuring shadows, setting up IBL, or optimizing lighting performance.
-- [`threejs-loaders`](agents-skills/threejs-loaders/SKILL.md): **threejs-loaders** - Three.js asset loading - GLTF, textures, images, models, async patterns. Use when loading 3D models, textures, HDR environments, or managing loading progress.
-- [`threejs-materials`](agents-skills/threejs-materials/SKILL.md): **threejs-materials** - Three.js materials - PBR, basic, phong, shader materials, material properties. Use when styling meshes, working with textures, creating custom shaders, or optimizing material performance.
-- [`threejs-postprocessing`](agents-skills/threejs-postprocessing/SKILL.md): **threejs-postprocessing** - Three.js post-processing - EffectComposer, bloom, DOF, screen effects. Use when adding visual effects, color grading, blur, glow, or creating custom screen-space shaders.
-- [`threejs-shaders`](agents-skills/threejs-shaders/SKILL.md): **threejs-shaders** - Three.js shaders - GLSL, ShaderMaterial, uniforms, custom effects. Use when creating custom visual effects, modifying vertices, writing fragment shaders, or extending built-in materials.
-- [`threejs-textures`](agents-skills/threejs-textures/SKILL.md): **threejs-textures** - Three.js textures - texture types, UV mapping, environment maps, texture settings. Use when working with images, UV coordinates, cubemaps, HDR environments, or texture optimization.
+- [`threejs-animation`](.agents/skills/threejs-animation/SKILL.md): **threejs-animation** - Three.js animation - keyframe animation, skeletal animation, morph targets, animation mixing. Use when animating objects, playing GLTF animations, creating procedural motion, or blending animations.
+- [`threejs-fundamentals`](.agents/skills/threejs-fundamentals/SKILL.md): **threejs-fundamentals** - Three.js scene setup, cameras, renderer, Object3D hierarchy, coordinate systems. Use when setting up 3D scenes, creating cameras, configuring renderers, managing object hierarchies, or working with transforms.
+- [`threejs-geometry`](.agents/skills/threejs-geometry/SKILL.md): **threejs-geometry** - Three.js geometry creation - built-in shapes, BufferGeometry, custom geometry, instancing. Use when creating 3D shapes, working with vertices, building custom meshes, or optimizing with instanced rendering.
+- [`threejs-interaction`](.agents/skills/threejs-interaction/SKILL.md): **threejs-interaction** - Three.js interaction - raycasting, controls, mouse/touch input, object selection. Use when handling user input, implementing click detection, adding camera controls, or creating interactive 3D experiences.
+- [`threejs-lighting`](.agents/skills/threejs-lighting/SKILL.md): **threejs-lighting** - Three.js lighting - light types, shadows, environment lighting. Use when adding lights, configuring shadows, setting up IBL, or optimizing lighting performance.
+- [`threejs-loaders`](.agents/skills/threejs-loaders/SKILL.md): **threejs-loaders** - Three.js asset loading - GLTF, textures, images, models, async patterns. Use when loading 3D models, textures, HDR environments, or managing loading progress.
+- [`threejs-materials`](.agents/skills/threejs-materials/SKILL.md): **threejs-materials** - Three.js materials - PBR, basic, phong, shader materials, material properties. Use when styling meshes, working with textures, creating custom shaders, or optimizing material performance.
+- [`threejs-postprocessing`](.agents/skills/threejs-postprocessing/SKILL.md): **threejs-postprocessing** - Three.js post-processing - EffectComposer, bloom, DOF, screen effects. Use when adding visual effects, color grading, blur, glow, or creating custom screen-space shaders.
+- [`threejs-shaders`](.agents/skills/threejs-shaders/SKILL.md): **threejs-shaders** - Three.js shaders - GLSL, ShaderMaterial, uniforms, custom effects. Use when creating custom visual effects, modifying vertices, writing fragment shaders, or extending built-in materials.
+- [`threejs-textures`](.agents/skills/threejs-textures/SKILL.md): **threejs-textures** - Three.js textures - texture types, UV mapping, environment maps, texture settings. Use when working with images, UV coordinates, cubemaps, HDR environments, or texture optimization.
 
 ### Remotion
 
-- [`remotion`](agents-skills/remotion/SKILL.md): **remotion** - Toolkit-specific Remotion patterns — custom transitions, shared components, and project conventions. For core Remotion framework knowledge (hooks, animations, rendering, etc.), see the `remotion-official` skill.
-- [`remotion-best-practices`](agents-skills/remotion-best-practices/SKILL.md): **remotion-best-practices** - Best practices for Remotion - Video creation in React
+- [`remotion`](.agents/skills/remotion/SKILL.md): **remotion** - Toolkit-specific Remotion patterns — custom transitions, shared components, and project conventions. For core Remotion framework knowledge (hooks, animations, rendering, etc.), see the `remotion-official` skill.
+- [`remotion-best-practices`](.agents/skills/remotion-best-practices/SKILL.md): **remotion-best-practices** - Best practices for Remotion - Video creation in React
 
 ### HyperFrames
 
-- [`hyperframes`](agents-skills/hyperframes/SKILL.md): **hyperframes** - Create video compositions, animations, title cards, overlays, captions, voiceovers, audio-reactive visuals, and scene transitions in HyperFrames HTML. Use when asked to build any HTML-based video content, add captions or subtitles synced to audio, generate text-to-speech narration, create audio-reactive animation (beat sync, glow, pulse driven by music), add animated text highlighting (marker sweeps, hand-drawn circles, burst lines, scribble, sketchout), or add transitions between scenes (crossfades, wipes, reveals, shader transitions). Covers composition authoring, timing, media, and the full video production workflow. For CLI commands (init, lint, preview, render, transcribe, tts) see the hyperframes-cli skill.
-- [`hyperframes-cli`](agents-skills/hyperframes-cli/SKILL.md): **hyperframes-cli** - HyperFrames CLI tool — hyperframes init, lint, validate, preview, render, transcribe, tts, doctor, browser, info, upgrade, compositions, docs, benchmark. Use when scaffolding a project, linting or validating compositions, previewing in the studio, rendering to video, transcribing audio, generating TTS, or troubleshooting the HyperFrames environment.
-- [`hyperframes-registry`](agents-skills/hyperframes-registry/SKILL.md): **hyperframes-registry** - Install and wire registry blocks and components into HyperFrames compositions. Use when running hyperframes add, installing a block or component, wiring an installed item into index.html, or working with hyperframes.json. Covers the add command, install locations, block sub-composition wiring, component snippet merging, and registry discovery.
-- [`website-to-hyperframes`](agents-skills/website-to-hyperframes/SKILL.md): **website-to-hyperframes**
+- [`hyperframes`](.agents/skills/hyperframes/SKILL.md): **hyperframes** - Create video compositions, animations, title cards, overlays, captions, voiceovers, audio-reactive visuals, and scene transitions in HyperFrames HTML. Use when asked to build any HTML-based video content, add captions or subtitles synced to audio, generate text-to-speech narration, create audio-reactive animation (beat sync, glow, pulse driven by music), add animated text highlighting (marker sweeps, hand-drawn circles, burst lines, scribble, sketchout), or add transitions between scenes (crossfades, wipes, reveals, shader transitions). Covers composition authoring, timing, media, and the full video production workflow. For CLI commands (init, lint, preview, render, transcribe, tts) see the hyperframes-cli skill.
+- [`hyperframes-cli`](.agents/skills/hyperframes-cli/SKILL.md): **hyperframes-cli** - HyperFrames CLI tool — hyperframes init, lint, validate, preview, render, transcribe, tts, doctor, browser, info, upgrade, compositions, docs, benchmark. Use when scaffolding a project, linting or validating compositions, previewing in the studio, rendering to video, transcribing audio, generating TTS, or troubleshooting the HyperFrames environment.
+- [`hyperframes-registry`](.agents/skills/hyperframes-registry/SKILL.md): **hyperframes-registry** - Install and wire registry blocks and components into HyperFrames compositions. Use when running hyperframes add, installing a block or component, wiring an installed item into index.html, or working with hyperframes.json. Covers the add command, install locations, block sub-composition wiring, component snippet merging, and registry discovery.
+- [`website-to-hyperframes`](.agents/skills/website-to-hyperframes/SKILL.md): **website-to-hyperframes**
 
 ### Vercel / React
 
-- [`vercel-composition-patterns`](agents-skills/vercel-composition-patterns/SKILL.md): **vercel-composition-patterns**
-- [`vercel-react-best-practices`](agents-skills/vercel-react-best-practices/SKILL.md): **vercel-react-best-practices** - React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when writing, reviewing, or refactoring React/Next.js code to ensure optimal performance patterns. Triggers on tasks involving React components, Next.js pages, data fetching, bundle optimization, or performance improvements.
+- [`vercel-composition-patterns`](.agents/skills/vercel-composition-patterns/SKILL.md): **vercel-composition-patterns**
+- [`vercel-react-best-practices`](.agents/skills/vercel-react-best-practices/SKILL.md): **vercel-react-best-practices** - React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when writing, reviewing, or refactoring React/Next.js code to ensure optimal performance patterns. Triggers on tasks involving React components, Next.js pages, data fetching, bundle optimization, or performance improvements.
+
+### Vercel / Deploy
+
+- [`deploy-to-vercel`](.agents/skills/deploy-to-vercel/SKILL.md): **deploy-to-vercel** - Deploy applications and websites to Vercel. Use when the user requests deployment actions like "deploy my app", "deploy and give me the link", "push this live", or "create a preview deployment".
+- [`vercel-cli-with-tokens`](.agents/skills/vercel-cli-with-tokens/SKILL.md): **vercel-cli-with-tokens** - Deploy and manage projects on Vercel using token-based authentication. Use when working with Vercel CLI using access tokens rather than interactive login — e.g. "deploy to vercel", "set up vercel", "add environment variables to vercel".
+- [`vercel-optimize`](.agents/skills/vercel-optimize/SKILL.md): **vercel-optimize** - "Use for Vercel cost and performance optimization on deployed projects, especially Next.js, SvelteKit, Nuxt, and limited Astro apps. Collect Vercel metrics, usage, project config, and code scan results first; investigate only metric-backed candidates; produce ranked recommendations grounded in verified files and version-aware Vercel/framework docs. Trigger for Vercel bill reduction, slow or expensive routes, caching opportunities, Function Invocations, Build Minutes, Fast Data Transfer, Core Web Vitals, Bot Management, Fluid compute, or cost breakdown requests."
+- [`vercel-react-native-skills`](.agents/skills/vercel-react-native-skills/SKILL.md): **vercel-react-native-skills**
+- [`vercel-react-view-transitions`](.agents/skills/vercel-react-view-transitions/SKILL.md): **vercel-react-view-transitions** - Guide for implementing smooth, native-feeling animations using React's View Transition API (`<ViewTransition>` component, `addTransitionType`, and CSS view transition pseudo-elements). Use this skill whenever the user wants to add page transitions, animate route changes, create shared element animations, animate enter/exit of components, animate list reorder, implement directional (forward/back) navigation animations, or integrate view transitions in Next.js. Also use when the user mentions view transitions, `startViewTransition`, `ViewTransition`, transition types, or asks about animating between UI states in React without third-party animation libraries.
 
 ### Video Tools
 
-- [`ffmpeg`](agents-skills/ffmpeg/SKILL.md): **ffmpeg** - Video and audio processing with FFmpeg. Use for format conversion, resizing, compression, audio extraction, and preparing assets for Remotion. Triggers include converting GIF to MP4, resizing video, extracting audio, compressing files, or any media transformation task.
-- [`video-download`](agents-skills/video-download/SKILL.md): **video-download**
-- [`video-edit`](agents-skills/video-edit/SKILL.md): **video-edit**
-- [`video-understand`](agents-skills/video-understand/SKILL.md): **video-understand**
-- [`video_toolkit`](agents-skills/video_toolkit/SKILL.md): **video_toolkit** - Create professional videos autonomously using claude-code-video-toolkit — AI voiceovers, image generation, music, talking heads, and Remotion rendering.
-- [`playwright-recording`](agents-skills/playwright-recording/SKILL.md): **playwright-recording** - Record browser interactions as video using Playwright. Use for capturing demo videos, app walkthroughs, and UI flows for Remotion videos. Triggers include recording a demo, capturing browser video, screen recording a website, or creating walkthrough footage.
+- [`ffmpeg`](.agents/skills/ffmpeg/SKILL.md): **ffmpeg** - Video and audio processing with FFmpeg. Use for format conversion, resizing, compression, audio extraction, and preparing assets for Remotion. Triggers include converting GIF to MP4, resizing video, extracting audio, compressing files, or any media transformation task.
+- [`video-download`](.agents/skills/video-download/SKILL.md): **video-download**
+- [`video-edit`](.agents/skills/video-edit/SKILL.md): **video-edit**
+- [`video-understand`](.agents/skills/video-understand/SKILL.md): **video-understand**
+- [`video_toolkit`](.agents/skills/video_toolkit/SKILL.md): **video_toolkit** - Create professional videos autonomously using claude-code-video-toolkit — AI voiceovers, image generation, music, talking heads, and Remotion rendering.
+- [`playwright-recording`](.agents/skills/playwright-recording/SKILL.md): **playwright-recording** - Record browser interactions as video using Playwright. Use for capturing demo videos, app walkthroughs, and UI flows for Remotion videos. Triggers include recording a demo, capturing browser video, screen recording a website, or creating walkthrough footage.
 
 ### AI Video Generation
 
-- [`ai-video-gen`](agents-skills/ai-video-gen/SKILL.md): **ai-video-gen**
-- [`ai-video-generation`](agents-skills/ai-video-generation/SKILL.md): **ai-video-generation**
-- [`ltx2`](agents-skills/ltx2/SKILL.md): **ltx2** - AI video generation with LTX-2.3 22B — text-to-video, image-to-video clips for video production. Use when generating video clips, animating images, creating b-roll, animated backgrounds, or motion content. Triggers include video generation, animate image, b-roll, motion, video clip, text-to-video, image-to-video.
-- [`seedance-2-0`](agents-skills/seedance-2-0/SKILL.md): **seedance-2-0**
+- [`ai-video-gen`](.agents/skills/ai-video-gen/SKILL.md): **ai-video-gen**
+- [`ai-video-generation`](.agents/skills/ai-video-generation/SKILL.md): **ai-video-generation**
+- [`ltx2`](.agents/skills/ltx2/SKILL.md): **ltx2** - AI video generation with LTX-2.3 22B — text-to-video, image-to-video clips for video production. Use when generating video clips, animating images, creating b-roll, animated backgrounds, or motion content. Triggers include video generation, animate image, b-roll, motion, video clip, text-to-video, image-to-video.
+- [`seedance-2-0`](.agents/skills/seedance-2-0/SKILL.md): **seedance-2-0**
 
 ### Animation / Motion
 
-- [`framer-motion`](agents-skills/framer-motion/SKILL.md): **framer-motion** - Use when implementing Disney's 12 animation principles with Framer Motion in React applications
-- [`lottie-bodymovin`](agents-skills/lottie-bodymovin/SKILL.md): **lottie-bodymovin** - Use when implementing Disney's 12 animation principles with Lottie animations exported from After Effects
-- [`character-animation-qa`](agents-skills/character-animation-qa/SKILL.md): **character-animation-qa** - Review local character animation with schema checks, Playwright browser previews, frame sampling, and FFmpeg/ffprobe final output checks.
-- [`svg-character-animation`](agents-skills/svg-character-animation/SKILL.md): **svg-character-animation** - Animate SVG character rigs with GSAP, CSS transforms, Remotion frame control, and HyperFrames-compatible browser previews.
-- [`pose-library-design`](agents-skills/pose-library-design/SKILL.md): **pose-library-design** - Design reusable 2D character pose libraries, action cycles, and expression states for data-driven animation.
+- [`framer-motion`](.agents/skills/framer-motion/SKILL.md): **framer-motion** - Use when implementing Disney's 12 animation principles with Framer Motion in React applications
+- [`lottie-bodymovin`](.agents/skills/lottie-bodymovin/SKILL.md): **lottie-bodymovin** - Use when implementing Disney's 12 animation principles with Lottie animations exported from After Effects
+- [`character-animation-qa`](.agents/skills/character-animation-qa/SKILL.md): **character-animation-qa** - Review local character animation with schema checks, Playwright browser previews, frame sampling, and FFmpeg/ffprobe final output checks.
+- [`svg-character-animation`](.agents/skills/svg-character-animation/SKILL.md): **svg-character-animation** - Animate SVG character rigs with GSAP, CSS transforms, Remotion frame control, and HyperFrames-compatible browser previews.
+- [`pose-library-design`](.agents/skills/pose-library-design/SKILL.md): **pose-library-design** - Design reusable 2D character pose libraries, action cycles, and expression states for data-driven animation.
 
 ### Manim
 
-- [`manim-composer`](agents-skills/manim-composer/SKILL.md): **manim-composer**
-- [`manimce-best-practices`](agents-skills/manimce-best-practices/SKILL.md): **manimce-best-practices**
-- [`manimgl-best-practices`](agents-skills/manimgl-best-practices/SKILL.md): **manimgl-best-practices**
+- [`manim-composer`](.agents/skills/manim-composer/SKILL.md): **manim-composer**
+- [`manimce-best-practices`](.agents/skills/manimce-best-practices/SKILL.md): **manimce-best-practices**
+- [`manimgl-best-practices`](.agents/skills/manimgl-best-practices/SKILL.md): **manimgl-best-practices**
 
 ### Design / Frontend
 
-- [`apple-design`](agents-skills/apple-design/SKILL.md): **apple-design** - Apple's approach to interface design and fluid, physical motion, translated for the web. Use when building or reviewing gesture-driven UI, spring animations, drag/swipe/sheet interactions, momentum and interruptible transitions, translucent materials and depth, typography (optical sizing, tracking, leading), reduced-motion, or the design foundations (feedback, spatial consistency, restraint) behind Apple-style interfaces.
-- [`tailwind-design-system`](agents-skills/tailwind-design-system/SKILL.md): **tailwind-design-system** - Build scalable design systems with Tailwind CSS v4, design tokens, component libraries, and responsive patterns. Use when creating component libraries, implementing design systems, or standardizing UI patterns.
-- [`web-design-guidelines`](agents-skills/web-design-guidelines/SKILL.md): **web-design-guidelines** - Review UI code for Web Interface Guidelines compliance. Use when asked to "review my UI", "check accessibility", "audit design", "review UX", or "check my site against best practices".
-- [`visual-style`](agents-skills/visual-style/SKILL.md): **visual-style**
-- [`d3-viz`](agents-skills/d3-viz/SKILL.md): **d3-viz** - Creating interactive data visualisations using d3.js. This skill should be used when creating custom charts, graphs, network diagrams, geographic visualisations, or any complex SVG-based data visualisation that requires fine-grained control over visual elements, transitions, or interactions. Use this for bespoke visualisations beyond standard charting libraries, whether in React, Vue, Svelte, vanilla JavaScript, or any other environment.
+- [`apple-design`](.agents/skills/apple-design/SKILL.md): **apple-design** - Apple's approach to interface design and fluid, physical motion, translated for the web. Use when building or reviewing gesture-driven UI, spring animations, drag/swipe/sheet interactions, momentum and interruptible transitions, translucent materials and depth, typography (optical sizing, tracking, leading), reduced-motion, or the design foundations (feedback, spatial consistency, restraint) behind Apple-style interfaces.
+- [`tailwind-design-system`](.agents/skills/tailwind-design-system/SKILL.md): **tailwind-design-system** - Build scalable design systems with Tailwind CSS v4, design tokens, component libraries, and responsive patterns. Use when creating component libraries, implementing design systems, or standardizing UI patterns.
+- [`web-design-guidelines`](.agents/skills/web-design-guidelines/SKILL.md): **web-design-guidelines** - Review UI code for Web Interface Guidelines compliance. Use when asked to "review my UI", "check accessibility", "audit design", "review UX", or "check my site against best practices".
+- [`visual-style`](.agents/skills/visual-style/SKILL.md): **visual-style**
+- [`d3-viz`](.agents/skills/d3-viz/SKILL.md): **d3-viz** - Creating interactive data visualisations using d3.js. This skill should be used when creating custom charts, graphs, network diagrams, geographic visualisations, or any complex SVG-based data visualisation that requires fine-grained control over visual elements, transitions, or interactions. Use this for bespoke visualisations beyond standard charting libraries, whether in React, Vue, Svelte, vanilla JavaScript, or any other environment.
 
 ### AI Image
 
-- [`bfl-api`](agents-skills/bfl-api/SKILL.md): **bfl-api** - BFL FLUX API integration guide covering endpoints, async polling patterns, rate limiting, error handling, webhooks, and regional endpoints with Python and TypeScript code examples.
-- [`flux-best-practices`](agents-skills/flux-best-practices/SKILL.md): **flux-best-practices** - Comprehensive guide for BFL FLUX image generation models. Covers prompting, T2I, I2I, structured JSON, hex colors, typography, multi-reference editing, and model-specific best practices for FLUX.2 and FLUX.1 families.
-- [`grok-media`](agents-skills/grok-media/SKILL.md): **grok-media** - xAI Grok image and video generation guide covering authentication, endpoints, prompt structure, image editing, reference-image video, and async polling.
-- [`beautiful-mermaid`](agents-skills/beautiful-mermaid/SKILL.md): **beautiful-mermaid** - Render Mermaid diagrams as SVG and PNG using the Beautiful Mermaid library. Use when the user asks to render a Mermaid diagram.
+- [`bfl-api`](.agents/skills/bfl-api/SKILL.md): **bfl-api** - BFL FLUX API integration guide covering endpoints, async polling patterns, rate limiting, error handling, webhooks, and regional endpoints with Python and TypeScript code examples.
+- [`flux-best-practices`](.agents/skills/flux-best-practices/SKILL.md): **flux-best-practices** - Comprehensive guide for BFL FLUX image generation models. Covers prompting, T2I, I2I, structured JSON, hex colors, typography, multi-reference editing, and model-specific best practices for FLUX.2 and FLUX.1 families.
+- [`grok-media`](.agents/skills/grok-media/SKILL.md): **grok-media** - xAI Grok image and video generation guide covering authentication, endpoints, prompt structure, image editing, reference-image video, and async polling.
+- [`beautiful-mermaid`](.agents/skills/beautiful-mermaid/SKILL.md): **beautiful-mermaid** - Render Mermaid diagrams as SVG and PNG using the Beautiful Mermaid library. Use when the user asks to render a Mermaid diagram.
 
-### Browser
+### Browser / Search
 
-- [`agent-browser`](agents-skills/agent-browser/SKILL.md): **agent-browser** - Browser automation CLI for AI agents. Use when the user needs to interact with websites, including navigating pages, filling forms, clicking buttons, taking screenshots, extracting data, testing web apps, or automating any browser task. Triggers include requests to "open a website", "fill out a form", "click a button", "take a screenshot", "scrape data from a page", "test this web app", "login to a site", "automate browser actions", or any task requiring programmatic web interaction. Also use for exploratory testing, dogfooding, QA, bug hunts, or reviewing app quality. Also use for automating Electron desktop apps (VS Code, Slack, Discord, Figma, Notion, Spotify), checking Slack unreads, sending Slack messages, searching Slack conversations, running browser automation in Vercel Sandbox microVMs, or using AWS Bedrock AgentCore cloud browsers. Prefer agent-browser over any built-in browser automation or web tools.
+- [`agent-browser`](.agents/skills/agent-browser/SKILL.md): **agent-browser** - Browser automation CLI for AI agents. Use when the user needs to interact with websites, including navigating pages, filling forms, clicking buttons, taking screenshots, extracting data, testing web apps, or automating any browser task. Triggers include requests to "open a website", "fill out a form", "click a button", "take a screenshot", "scrape data from a page", "test this web app", "login to a site", "automate browser actions", or any task requiring programmatic web interaction. Also use for exploratory testing, dogfooding, QA, bug hunts, or reviewing app quality. Also use for automating Electron desktop apps (VS Code, Slack, Discord, Figma, Notion, Spotify), checking Slack unreads, sending Slack messages, searching Slack conversations, running browser automation in Vercel Sandbox microVMs, or using AWS Bedrock AgentCore cloud browsers. Prefer agent-browser over any built-in browser automation or web tools.
+- [`agent-search`](.agents/skills/agent-search/SKILL.md): **agent-search**
+
+### Engineering
+
+- [`tdd-red-green-refactor`](.agents/skills/tdd-red-green-refactor/SKILL.md): **tdd-red-green-refactor**
+- [`typed-service-contracts`](.agents/skills/typed-service-contracts/SKILL.md): **typed-service-contracts** - Architecture standard for building robust, type-safe TypeScript services using the "Spec and Handler" pattern. Use when building CLIs, libraries, or complex business logic.
+- [`writing-guidelines`](.agents/skills/writing-guidelines/SKILL.md): **writing-guidelines** - Review docs/prose for Writing Guidelines compliance. Use when asked to "review my docs", "check writing style", "audit prose", "review docs voice and tone", or "check this page against the writing handbook".
 
 ### DingTalk
 
-- [`dws`](agents-skills/dws/SKILL.md): **dws** - 管理钉钉产品能力(AI表格/AI搜问/日历/通讯录/群聊与机器人/待办/审批/考勤/日志/DING消息/开放平台文档/钉钉文档/钉钉云盘/AI听记/邮箱/在线电子表格/知识库等)。当用户需要操作表格数据、管理日程会议、模糊找人/查谁负责某事项、查询通讯录、管理群聊、机器人发消息、创建待办、提交审批、查看考勤、提交日报周报（钉钉日志模版）、读写钉钉文档、上传下载云盘文件、查询听记纪要、收发邮件、读写在线电子表格(axls)、管理钉钉知识库时使用。
+- [`dws`](.agents/skills/dws/SKILL.md): **dws** - 管理钉钉产品能力(AI表格/AI搜问/日历/通讯录/群聊与机器人/待办/审批/考勤/日志/DING消息/开放平台文档/钉钉文档/钉钉云盘/AI听记/邮箱/在线电子表格/知识库等)。当用户需要操作表格数据、管理日程会议、模糊找人/查谁负责某事项、查询通讯录、管理群聊、机器人发消息、创建待办、提交审批、查看考勤、提交日报周报（钉钉日志模版）、读写钉钉文档、上传下载云盘文件、查询听记纪要、收发邮件、读写在线电子表格(axls)、管理钉钉知识库时使用。
 
 ## Install Notes
 
@@ -358,3 +387,24 @@ Copy any desired folder from `skills/` into your Codex skills directory, usually
 ```
 
 复制完成后，重启 Codex 或新开一个对话，让 Codex 重新加载 skill。
+
+## 2026-06-25 Local Deployment Sync
+
+This sync adds locally deployed skills that were not already present in the repository. Existing skill folders were left unchanged.
+
+### 中文说明
+
+本次同步只补充本地已经部署、但仓库中尚未存在的 skill。已存在的 skill 目录没有重复上传，也没有删除任何本地文件。
+
+### Added Skills
+
+- [`.system/imagegen`](skills/.system/imagegen/SKILL.md): **imagegen** - Generate or edit raster images when the task benefits from AI-created bitmap visuals such as photos, illustrations, textures, sprites, mockups, or transparent-background cutouts. Use when Codex should create a brand-new image, transform an existing image, or derive visual variants from references, and the output should be a bitmap asset rather than repo-native code or vector. Do not use when the task is better handled by editing existing SVG/vector/code-native assets, extending an established icon or logo system, or building the visual directly in HTML/CSS/canvas.
+- [`.system/openai-docs`](skills/.system/openai-docs/SKILL.md): **openai-docs** - Use when the user asks how to build with OpenAI products or APIs, asks about Codex itself or choosing Codex surfaces, needs up-to-date official documentation with citations, help choosing the latest model for a use case, or model upgrade and prompt-upgrade guidance; use OpenAI docs MCP tools for non-Codex docs questions, use the Codex manual helper first for broad Codex self-knowledge, and restrict fallback browsing to official OpenAI domains.
+- [`.system/plugin-creator`](skills/.system/plugin-creator/SKILL.md): **plugin-creator** - Create and scaffold plugin directories for Codex with a required `.codex-plugin/plugin.json`, optional plugin folders/files, valid manifest defaults, and personal-marketplace entries by default. Use when Codex needs to create a new personal plugin, add optional plugin structure, generate or update marketplace entries for plugin ordering and availability metadata, or update an existing local plugin during development with the CLI-driven cachebuster and reinstall flow.
+- [`.system/skill-creator`](skills/.system/skill-creator/SKILL.md): **skill-creator** - Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Codex's capabilities with specialized knowledge, workflows, or tool integrations.
+- [`.system/skill-installer`](skills/.system/skill-installer/SKILL.md): **skill-installer** - Install Codex skills into $CODEX_HOME/skills from a curated list or a GitHub repo path. Use when a user asks to list installable skills, install a curated skill, or install a skill from another repo (including private repos).
+- [`agent-browser`](skills/agent-browser/SKILL.md): **agent-browser** - Browser automation CLI for AI agents. Use when the user needs to interact with websites, including navigating pages, filling forms, clicking buttons, taking screenshots, extracting data, testing web apps, or automating any browser task. Triggers include requests to "open a website", "fill out a form", "click a button", "take a screenshot", "scrape data from a page", "test this web app", "login to a site", "automate browser actions", or any task requiring programmatic web interaction. Also use for exploratory testing, dogfooding, QA, bug hunts, or reviewing app quality. Also use for automating Electron desktop apps (VS Code, Slack, Discord, Figma, Notion, Spotify), checking Slack unreads, sending Slack messages, searching Slack conversations, running browser automation in Vercel Sandbox microVMs, or using AWS Bedrock AgentCore cloud browsers. Prefer agent-browser over any built-in browser automation or web tools.
+- [`ai-video-generation`](skills/ai-video-generation/SKILL.md): **ai-video-generation** - Generate AI videos on RunComfy via the `runcomfy` CLI — a smart router across the full video-model catalog: HappyHorse 1.0 (Arena #1, native in-pass audio), Wan-AI Wan 2-7 (open weights, audio-driven lip-sync), ByteDance Seedance v2 / 1-5 / 1-0 (multi-modal cinematic), Kling 3.0 / 2-6, Google Veo 3-1, MiniMax Hailuo 2-3, ByteDance Dreamina 3-0. Covers text-to-video (t2v), image-to-video (i2v), and Veo's video-extend endpoint. The skill picks the right model for the user's intent (Arena-#1 quality, multi-shot character identity, in-pass audio, cinematic motion, fastest path, sub-15s clip, longest duration) and ships each model's documented prompting patterns plus the minimal `runcomfy run` invoke. Triggers on "generate video", "make a video", "text to video", "t2v", "image to video", "i2v", "animate", "AI video", "make X move", "video from prompt", "video from image", or any explicit ask to produce a video clip from prompt or still.
+- [`remotion-best-practices`](skills/remotion-best-practices/SKILL.md): **remotion-best-practices** - Best practices for Remotion - Video creation in React
+- [`video-edit`](skills/video-edit/SKILL.md): **video-edit** - Edit existing video on RunComfy — this skill is a smart router that matches the user's intent to the right edit model in the RunComfy catalog. Picks Wan 2.7 Edit-Video (general restyle / background swap / packaging swap, identity + motion preservation), Kling 2.6 Pro Motion Control (transfer precise motion from a reference video to a target character), or Lucy Edit Restyle (lightweight identity-stable restyle / outfit swap). Bundles each model's documented prompting patterns so the skill gets sharper edits without burning iterations on the wrong model. Calls `runcomfy run <vendor>/<model>/<endpoint>` through the local RunComfy CLI. Triggers on "video edit", "edit video", "restyle video", "swap video background", "motion control", "outfit swap video", or any explicit ask to transform a video.
+- [`web-design-guidelines`](skills/web-design-guidelines/SKILL.md): **web-design-guidelines** - Review UI code for Web Interface Guidelines compliance. Use when asked to "review my UI", "check accessibility", "audit design", "review UX", or "check my site against best practices".
