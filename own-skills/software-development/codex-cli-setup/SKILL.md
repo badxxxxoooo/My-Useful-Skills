@@ -1,7 +1,7 @@
 ---
 name: codex-cli-setup
-description: Codex CLI 安装、登录、大陆网络中转与桌面应用关系。Use when 配置或排查 Codex CLI。
-version: 1.0.0
+description: Use when 配置/排查 Codex CLI 环境（安装、登录、大陆网络中转、cc-switch 排障、skill 精简）。
+version: 1.0.1
 author: Hermes Agent
 license: MIT
 platforms: [windows, macos, linux]
@@ -83,6 +83,20 @@ curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1:15721/v1/models   # 应 
 Codex CLI 启动时必连 `https://chatgpt.com/backend-api/ps/mcp`（插件市场通道，需 VPN）。无 VPN 时刷 `ERROR ... Reconnecting... 1/5..5/5`，**重试耗尽后自动继续干活，不阻塞模型请求**（模型走 cc-switch 不需要 VPN）。判断任务是否卡死看**文件 mtime / git commit**，不要见 MCP 报错就杀进程。
 
 禁用 `~/.codex/config.toml` 里 `[plugins."..."]` 的 `enabled=false` **不能阻止**该通道（内置行为），无需为此改配置；若已改想恢复：`cp ~/.codex/config.toml.bak-plugins ~/.codex/config.toml`。
+
+## GitHub 直连被重置（大陆网络，与 cc-switch 同场排查）
+
+GitHub 克隆/push 报 `Connection was reset`（`gh repo clone` / `git push` 均挂）时，**别先怀疑 auth**——先查代理进程是否真的在跑。光有服务进程（`FlClashHelperService.exe`）不算，**主程序（`FlClash.exe` + `FlClashCore.exe`）必须活着**，且 mixed-port 有 LISTENING：
+
+```bash
+netstat -ano | grep ":7890" | grep LISTENING          # FlClash 默认 mixed-port 7890
+explorer.exe "D:\\System\\FlClash\\FlClash.exe"        # 没监听就启动主程序（explorer 拉起最可靠）
+curl -s -o /dev/null -w "%{http_code}" -x http://127.0.0.1:7890 https://github.com   # 应 200
+git config --global http.proxy http://127.0.0.1:7890  # 配全局代理（一次配好）
+git config --global https.proxy http://127.0.0.1:7890
+```
+
+注意：配了全局 git 代理后，FlClash 关闭时 git 会失败（`--unset` 可还原）。真实 incident (2026-08)：cc-switch 502 排查时发现 FlClash 只剩 HelperService、GitHub push 全部 Connection reset；启动主程序 + 配代理后恢复。这也解释了为什么 Codex 无 VPN 时 MCP 报错但模型能用——模型走 cc-switch（国内直连），MCP 走 chatgpt.com（需 FlClash）。
 
 ## 精简 Codex skill
 

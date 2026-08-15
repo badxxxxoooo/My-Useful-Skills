@@ -45,7 +45,10 @@ for sk in "$SKILLS_ROOT"/*/*/SKILL.md; do
     third=$((third+1))
   fi
   mkdir -p "$(dirname "$dest")"
-  cp -r "$(dirname "$sk")" "$dest"
+  # 先清空目标再复制：cp -r src dest 在 dest 已存在时会产生 <dest>/<src_basename>/ 嵌套
+  rm -rf "$dest"
+  mkdir -p "$dest"
+  cp -r "$(dirname "$sk")"/. "$dest"/
 done
 
 echo "== 4/5 给自创建目录加说明 README =="

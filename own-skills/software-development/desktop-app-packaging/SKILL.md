@@ -92,6 +92,16 @@ def get_deepseek_config():
 - **`_internal/` layout** — frontend + models all under `_internal/`; paths that worked in dev (`../index.html`) may break; test static file serving from the packaged exe.
 - **`taskkill /F /IM msedgewebview2.exe` kills ALL WebView2 processes system-wide** (other apps too); kill only the app's own process/session.
 - **Endpoints added after build** — rebuild after any backend change; stale exe = 404 on new routes.
+- **PowerShell `Compress-Archive` can fail on a locked `.pyd`** — a freshly-built folder may have a DLL/.pyd momentarily locked (antivirus scan or a lingering process); `Compress-Archive` aborts the whole zip with "PermissionDenied/UnauthorizedAccessError". Fallback that always works: Python `zipfile` (walk the folder, `zf.write(full, rel)`), which skips-or-continues gracefully and is also fine for CJK paths:
+  ```python
+  import zipfile, os
+  with zipfile.ZipFile(dst, "w", zipfile.ZIP_DEFLATED) as zf:
+      for root, dirs, files in os.walk(src):
+          for f in files:
+              full = os.path.join(root, f)
+              zf.write(full, os.path.relpath(full, src))
+  ```
+  Real incident (2026-08): PowerShell Compress-Archive failed on `_internal\PIL\_avif.cp311-win_amd64.pyd` "正在被另一个进程使用"; Python zipfile completed the same 275-file archive in ~13s.
 
 ## Reference
 

@@ -3,3 +3,9 @@
 # 其余非内置 skill 同步到 hermes-skills/（第三方开源）。
 # 以后自建新 skill 时，把名字加到这里。
 skill-repo-sync
+task-router
+agent-skill-discovery
+codex-cli-setup
+desktop-app-packaging
+agent-skill-audit
+hermes-model-config

@@ -19,18 +19,25 @@ gh repo clone "$REPO_SPEC" "$WORK/repo" || { echo "克隆失败"; exit 1; }
 
 count=0
 fallback=0
+CODEX_HOME="${CODEX_HOME:-$HOME/.codex}"
+mkdir -p "$CODEX_HOME/skills"
+
 for sk in "$WORK/repo/$SUBDIR"/*/SKILL.md; do
   [ -f "$sk" ] || continue
   name=$(basename "$(dirname "$sk")")
-  echo "== 安装 $name -> $CATEGORY =="
+  echo "== 安装 $name（Hermes:$CATEGORY + Codex:平铺）=="
+  # Hermes
   if timeout 150 hermes skills install "$REPO_SPEC/$SUBDIR/$name" --category "$CATEGORY" --yes 2>&1 | grep -q "Installed:"; then
-    echo "  OK"
+    echo "  Hermes OK (install)"
     count=$((count+1))
   else
-    echo "  FAIL（可能 DANGEROUS 误判 / 网络超时 / already installed），直接复制兜底"
+    echo "  Hermes install 失败，直接复制兜底"
     cp -r "$(dirname "$sk")" "$HERMES_HOME/skills/$CATEGORY/$name"
     fallback=$((fallback+1))
   fi
+  # Codex（平铺）
+  cp -r "$(dirname "$sk")" "$CODEX_HOME/skills/$name"
+  echo "  Codex OK"
 done
 
 echo "完成：hermes install 成功 $count 个，兜底复制 $fallback 个"

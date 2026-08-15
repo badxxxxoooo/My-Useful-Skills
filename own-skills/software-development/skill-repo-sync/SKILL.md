@@ -43,7 +43,9 @@ $HERMES_HOME/skills/.bundled_manifest   内置 skill 清单（格式：名称:ha
 
 ---
 
-## 方向 A：GitHub → Hermes（部署 / 拉取）
+## 方向 A：GitHub → Hermes + Codex（部署 / 拉取）
+
+> 脚本 `scripts/pull-skills.sh` 会**同时**部署到 Hermes（`$HERMES_HOME/skills/<分类>/<名>/`）和 Codex（`~/.codex/skills/<名>/` 平铺），保持两边一致（用户偏好：两边同步部署）。
 
 ### 步骤
 
