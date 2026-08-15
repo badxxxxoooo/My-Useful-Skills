@@ -7,5 +7,5 @@ task-router
 agent-skill-discovery
 codex-cli-setup
 desktop-app-packaging
-python-desktop-app-shipping
-skill-discovery
+agent-skill-audit
+hermes-model-config
