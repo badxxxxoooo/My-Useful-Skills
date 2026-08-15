@@ -1,0 +1,11 @@
+# 自创建 skill 名单（每行一个 skill 名）
+# push-skills.sh 会把这些 skill 同步到仓库的 own-skills/ 目录，
+# 其余非内置 skill 同步到 hermes-skills/（第三方开源）。
+# 以后自建新 skill 时，把名字加到这里。
+skill-repo-sync
+task-router
+agent-skill-discovery
+codex-cli-setup
+desktop-app-packaging
+python-desktop-app-shipping
+skill-discovery
