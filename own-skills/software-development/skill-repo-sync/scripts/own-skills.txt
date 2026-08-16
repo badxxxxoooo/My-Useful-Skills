@@ -9,3 +9,4 @@ codex-cli-setup
 desktop-app-packaging
 agent-skill-audit
 hermes-model-config
+library-first
