@@ -90,6 +90,8 @@ Rules:
 
 ## Verification Gate (MANDATORY after any Codex run)
 
+**Applies to Hermes direct runs too (LIGHT tier):** this gate is for ANY delegated-or-self coding task, not just Codex. If Hermes ran the task directly, still run at least ONE real command (test/lint/build) and state the result before reporting "done" — never report completion on "looks fine". (Heavy direct runs: LOAD `verification-before-completion`.)
+
 **MANDATORY checkpoint:** every turn, `read-alert` also reports `VERIFY-REQUIRED` when a Codex task
 reached a terminal state (done / ended / stalled / clean-exit). If present, you MUST handle it BEFORE
 reporting "完成" to the user:
