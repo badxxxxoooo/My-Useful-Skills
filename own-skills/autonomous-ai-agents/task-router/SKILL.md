@@ -66,16 +66,16 @@ Rules:
 ## Delegating to Codex
 
 1. **Preconditions:** target must be inside a git repo (Codex refuses otherwise). For scratch work: `cd $(mktemp -d) && git init`.
-2. **Invoke** per the `codex` skill: `terminal(command="codex exec --sandbox workspace-write '<task>'", workdir="<repo>", background=true, pty=true)` — always `pty=true`, background for long tasks. Prepend the briefing block to the task string.
+2. **Invoke via codex-dispatch (auto-arm):** `terminal(command="bash C:/Users/ASUS/AppData/Local/hermes/scripts/codex-dispatch.sh <repo> '<task>' '<desc>' [--commits N]", workdir="<repo>", background=true, pty=true)` — always `pty=true`. The script arms the watchdog BEFORE launching codex (PID-less: file activity + expected commits), hard-verifies arming (`status` exit code; unarmed = dispatch FAILS, never runs codex unmonitored), runs codex in the foreground PTY, and auto-stops the watchdog on exit. Prepend the briefing block to the task string; pass `--commits N` = expected commits so completion is detected instead of stall.
 3. **Tell the user** the task is running in Codex and that it shares ~/.codex with Codex Desktop (they can watch it there).
-4. **Monitor with watchdog discipline — HARD mechanism, not good intentions.** Do NOT rely on "remembering to poll" — an LLM in a conversation has no timer and will silently forget (real incident: Codex stalled 90 min in a retry loop while Hermes did other work). Instead:
-   - **After dispatching, immediately run:** `python C:/Users/ASUS/AppData/Local/hermes/scripts/watchdog_codex.py start --pid <PID> --workdir <repo> --task "<desc>" --threshold 30 --commits <N>` (pass `--commits N` = number of commits the task should produce; the watchdog then reports "task DONE" instead of "stalled" once N commits land)
-   - **VERIFY the watchdog is actually armed: run `.../watchdog_codex.py status` and confirm it prints the task — do NOT proceed until you see it.** Real incident: dispatch without `start` → cron ran every 10 min but silently did nothing (no state) → Codex finished and hung 12 min undiscovered until the user asked.
+4. **Monitor with watchdog discipline — HARD mechanism, not good intentions.** Do NOT rely on "remembering to poll" — an LLM in a conversation has no timer and will silently forget (real incident: Codex stalled 90 min in a retry loop while Hermes did other work). Arming is now AUTOMATIC — `codex-dispatch.sh` arms the watchdog BEFORE launching codex (PID-less) and fails the dispatch (exit 1) if not armed; you cannot run codex unmonitored by forgetting a step. Still:
+   - **Confirm the dispatch output contains `armed=OK`** before telling the user "I'll monitor it". If you see `ERR: watchdog NOT armed`, the dispatch failed — do not proceed as if codex is running monitored.
+   - **VERIFY the watchdog is actually armed: run `.../watchdog_codex.py status`** (exit 0 + prints the task = armed; exit 1 = unarmed = abnormal). Real incident: dispatch without `start` → cron ran every 10 min but silently did nothing (no state) → Codex finished and hung 12 min undiscovered until the user asked.
    - **Every conversation turn, before anything else: run `python .../watchdog_codex.py read-alert`** — cron cannot deliver to this desktop session (local-only job, no live-delivery channel), so the watchdog writes `~/.codex-watchdog-alert.json` on stall/done/exit and you must CHECK it at the start of each turn. If it prints a message, handle it immediately (verify completion / fix the stall) before continuing the user's request.
    - A cron job (`codex-watchdog`, every 10 min, no_agent, deliver=origin) then automatically checks: process alive? files modified recently? It stays SILENT when healthy and ALERTS on exit or stall (no file writes for >threshold min while process alive).
-   - Verify the watchdog state file exists before telling the user "I'll monitor it". Optionally also poll once after ~2-3 min to confirm Codex entered actual work (not just MCP reconnect noise).
+   - Optionally poll once after ~2-3 min to confirm Codex entered actual work (not just MCP reconnect noise).
    - **Key lesson: Codex runs as a Hermes PTY child (python -m hermes_cli), so its process name/command line carry NO task info — `tasklist`/`wmic` cannot reliably find it. Judge liveness by FILE ACTIVITY (git commits + file mtimes), never by waiting for process exit: Codex often finishes writing code and then hangs without exiting (tokens stop moving). If git log shows the expected commits and files are written, the task is DONE — kill the zombie and proceed to the verification gate.**
-   - When the task finishes (exit notification): run `.../watchdog_codex.py stop` to clear state.
+   - When the task finishes: `codex-dispatch.sh` auto-stops the watchdog on exit (trap). If you killed the dispatch mid-run, run `.../watchdog_codex.py stop` manually to clear state.
 5. **Stall detection (卡死判断)** — suspect a stuck Codex when ANY of:
    - No output AND no file modifications for a long stretch (e.g. >20-30 min) while process still "running"
    - Output repeats the SAME error/failure in a loop (e.g. same test failing, same API error) — it's stuck in a retry cycle, not making progress
@@ -89,6 +89,22 @@ Rules:
 7. **Failure fallback:** on timeout/error, read the log first. Retry ONCE on transient failure; otherwise take over in Hermes (recover usable artifacts, don't blindly re-run).
 
 ## Verification Gate (MANDATORY after any Codex run)
+
+**MANDATORY checkpoint:** every turn, `read-alert` also reports `VERIFY-REQUIRED` when a Codex task
+reached a terminal state (done / ended / stalled / clean-exit). If present, you MUST handle it BEFORE
+reporting "完成" to the user:
+
+1. Run this gate (tier below) and SAVE the actual command output to
+   `~/.codex-verify-evidence/<task>.md` (fresh output, not "should pass").
+2. Clear with: `python C:/Users/ASUS/AppData/Local/hermes/scripts/watchdog_codex.py verify-clear <evidence-file>`.
+   The command refuses (exit 1) if the evidence file is missing or empty.
+3. Do NOT report "完成"/"done" while `VERIFY-REQUIRED` is set; do NOT clear without evidence.
+
+**Tiering (avoid overkill, but no loopholes):**
+- **Full gate** (steps 0-4 below) when the dispatch had `--commits N`, or the diff touches ≥ 3 files.
+- **Quick gate** otherwise: scope check (step 0) + ONE real command (test/lint/build) + one evidence line.
+- **Hard rule:** if the project has no tests, write that explicitly into the evidence
+  (command tried + why N/A) — never silently skip. "Looks fine" is NOT evidence.
 
 Codex's self-report is NOT evidence. After it finishes, before reporting success:
 
